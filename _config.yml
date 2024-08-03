@@ -5,6 +5,7 @@ url: "https://alexeinazarov.github.io"
 lang: fr
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 github_username: alexeinazarov
