@@ -8,6 +8,7 @@ plugins:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-include-cache
 github_username: alexeinazarov
 google_analytics: G-91WCLQETXM
 defaults:

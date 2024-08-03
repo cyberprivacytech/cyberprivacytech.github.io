@@ -1,3 +1,15 @@
+# Ignore local development configuration files
+Gemfile.local
+_config.local.yml
+
+# Ignore bundler config
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+/vendor/bundle
+.DS_Store
 _site/
 .jekyll-cache/
 *.gem
