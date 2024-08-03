@@ -2,6 +2,7 @@
 layout: home
 title: ""
 lang: fr
+permalink: /
 ---
 
 # Bienvenue chez <span style="color: blue;">CyberPrivacy</span><span style="color: green;">ProtecTech</span>
