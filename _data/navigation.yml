@@ -1,0 +1,11 @@
+main:
+  - title: "Français"
+    url: "/"
+  - title: "English"
+    url: "/index_en/"
+  - title: "Português"
+    url: "/index_pt/"
+  - title: "Contact"
+    url: "https://www.linkedin.com/in/alexeinazarov"
+    external: true
+

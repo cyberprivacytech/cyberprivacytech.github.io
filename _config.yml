@@ -1,0 +1,23 @@
+title: CyberPrivacyProtecTech
+email: your-email@example.com
+description: >-
+  Sophisticated Cyber Security Consulting Services
+baseurl: "" # Ensure this is empty since you're hosting at the root
+url: "https://alexeinazarov.github.io"
+lang: fr
+theme: "minimal-mistakes-jekyll"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+github_username: alexeinazarov
+
+google_analytics: G-91WCLQETXM # replace with your GA4 measurement ID
+
+defaults:
+  - scope:
+      path: "" # empty string means all files in the project
+      type: "pages"
+    values:
+      layout: "home"
+      lang: "fr"
+
