@@ -1,10 +1,10 @@
 main:
   - title: "Français"
-    url: "{{ site.baseurl }}/"
+    url: "/CyberPrivacyProtecTech/"
   - title: "English"
-    url: "{{ site.baseurl }}/index_en/"
+    url: "/CyberPrivacyProtecTech/index_en/"
   - title: "Português"
-    url: "{{ site.baseurl }}/index_pt/"
+    url: "/CyberPrivacyProtecTech/index_pt/"
   - title: "Contact"
     url: "https://www.linkedin.com/in/alexeinazarov"
     external: true
