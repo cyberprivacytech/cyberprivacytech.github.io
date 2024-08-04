@@ -19,15 +19,12 @@ end
 # GitHub Pages Gem
 gem "github-pages", group: :jekyll_plugins
 
-# Debugging and Verbose Output
+# Bundler Version
 gem "bundler", "~> 2.5.17"
 
 # Ensuring the correct version of bundler is used
 ruby '3.2.4'
 
-# Debugging Tools
+# Debugging Tools (only jekyll-debug is available)
 gem "jekyll-debug", :group => :jekyll_plugins
-
-# Verbose Logging
-gem "jekyll-verbose", :group => :jekyll_plugins
 
