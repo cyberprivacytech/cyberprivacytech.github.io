@@ -23,7 +23,6 @@ defaults:
     values:
       layout: "home"
       lang: "fr"
-      last_modified_at: last_modified_at
 
 exclude:
   - Gemfile.lock
@@ -36,12 +35,10 @@ exclude:
   - .DS_Store
   - .jekyll-cache/
   - _site/
-  - feed.xml  # Exclude feed.xml from being processed by jekyll-last-modified-at
+  - feed.xml
 
 include:
   - sitemap.xml
   - assets/images/logo.png
-  - assets/images/favicon.ico
-
-verbose: true  # Add this line for verbose output
+  - favicon.ico
 
