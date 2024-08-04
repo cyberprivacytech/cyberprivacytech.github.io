@@ -16,7 +16,7 @@ sitemap:
       <image:image>
         <image:loc>{{ post.image | absolute_url }}</image:loc>
         <image:title>{{ post.title }}</image:title>
-        <image:caption>{{ post.excerpt }}</image:caption>
+        <image:caption>{{ post.excerpt | strip_html | truncatewords: 20 }}</image:caption>
       </image:image>
       {% endif %}
     </url>
@@ -24,7 +24,7 @@ sitemap:
   {% for page in site.pages %}
     {% unless page.sitemap.exclude == "yes" or page.url contains "assets" %}
     <url>
-      <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | remove: 'index.html' }}</loc>
       <lastmod>{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
@@ -32,7 +32,7 @@ sitemap:
       <image:image>
         <image:loc>{{ page.image | absolute_url }}</image:loc>
         <image:title>{{ page.title }}</image:title>
-        <image:caption>{{ page.excerpt }}</image:caption>
+        <image:caption>{{ page.excerpt | strip_html | truncatewords: 20 }}</image:caption>
       </image:image>
       {% endif %}
     </url>
@@ -41,36 +41,36 @@ sitemap:
   {% for file in site.static_files %}
     {% if file.extname == ".png" or file.extname == ".jpg" or file.extname == ".jpeg" or file.extname == ".ico" %}
     <url>
-      <loc>{{ file.path | absolute_url }}</loc>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ file.path | remove: 'index.html' }}</loc>
       <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>
       <image:image>
-        <image:loc>{{ file.path | absolute_url }}</image:loc>
+        <image:loc>{{ site.url }}{{ site.baseurl }}{{ file.path | remove: 'index.html' }}</image:loc>
       </image:image>
     </url>
     {% endif %}
   {% endfor %}
   <url>
-    <loc>{{ site.url }}/assets/images/logo.png</loc>
+    <loc>{{ site.url }}{{ site.baseurl }}/assets/images/logo.png</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>
-      <image:loc>{{ site.url }}/assets/images/logo.png</image:loc>
+      <image:loc>{{ site.url }}{{ site.baseurl }}/assets/images/logo.png</image:loc>
       <image:title>Cyber Privacy Protection Tech Logo</image:title>
       <image:caption>Logo of Cyber Privacy Protection Tech, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>{{ site.url }}/favicon.ico</loc>
+    <loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>
-      <image:loc>{{ site.url }}/favicon.ico</image:loc>
+      <image:loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</image:loc>
       <image:title>Cyber Privacy Protection Tech Favicon</image:title>
-      <image:caption>Favicon of Cyber Privacy Protection Tech</image:caption>
+      <image:caption>Favicon of Cyber Privacy Protection Tech, representing cybersecurity and data protection services.</image:caption>
     </image:image>
   </url>
 </urlset>
