@@ -1,4 +1,3 @@
-# _config.yml
 title: CyberPrivacyProtecTech
 description: "Sophisticated Cyber Security Consulting Services"
 baseurl: "/CyberPrivacyProtecTech"
@@ -15,6 +14,7 @@ plugins:
 
 github_username: alexeinazarov
 google_analytics: G-91WCLQETXM
+
 defaults:
   - scope:
       path: ""
@@ -22,14 +22,20 @@ defaults:
     values:
       layout: "home"
       lang: "fr"
-      last_modified_at: "{{ 'now' | date: '%Y-%m-%d' }}"
+      last_modified_at: last_modified_at
+
+exclude:
+  - Gemfile.lock
+  - README.md
+  - Rakefile
+  - .gitignore
+  - .github/
+  - vendor/
+  - node_modules/
+  - .DS_Store
+  - .jekyll-cache/
+  - _site/
 
 include:
   - sitemap.xml
-
-exclude:
-  - assets/css
-  - assets/js
-  - node_modules
-  - vendor
 

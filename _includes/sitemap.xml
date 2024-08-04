@@ -32,15 +32,15 @@ layout: null
       </url>
     {% endif %}
   {% endfor %}
-  {% for static_file in site.static_files %}
-    {% if static_file.extname == ".png" or static_file.extname == ".jpg" or static_file.extname == ".jpeg" %}
+  {% for file in site.static_files %}
+    {% if file.extname == ".png" or file.extname == ".jpg" or file.extname == ".jpeg" %}
     <url>
-      <loc>{{ static_file.path | absolute_url }}</loc>
-      <lastmod>{{ static_file.modified_time | date_to_xmlschema }}</lastmod>
+      <loc>{{ file.path | absolute_url }}</loc>
+      <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>
       <image:image>
-        <image:loc>{{ static_file.path | absolute_url }}</image:loc>
+        <image:loc>{{ file.path | absolute_url }}</image:loc>
       </image:image>
     </url>
     {% endif %}
