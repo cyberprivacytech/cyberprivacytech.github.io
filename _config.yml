@@ -43,7 +43,5 @@ include:
   - assets/images/logo.png
   - assets/images/favicon.ico
 
-last_modified_at:
-  excluded_paths:
-    - feed.xml
+verbose: true  # Add this line for verbose output
 
