@@ -47,6 +47,8 @@ sitemap:
       <priority>0.5</priority>
       <image:image>
         <image:loc>{{ site.url }}{{ site.baseurl }}{{ file.path | remove: 'index.html' }}</image:loc>
+        <image:title>{{ file.basename | replace: '-', ' ' | capitalize }}</image:title>
+        <image:caption>{{ file.basename | replace: '-', ' ' | capitalize }}</image:caption>
       </image:image>
     </url>
     {% endif %}
@@ -59,7 +61,7 @@ sitemap:
     <image:image>
       <image:loc>{{ site.url }}{{ site.baseurl }}/assets/images/logo.png</image:loc>
       <image:title>Cyber Privacy Protection Tech Logo</image:title>
-      <image:caption>Logo of Cyber Privacy Protection Tech, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov</image:caption>
+      <image:caption>Logo of Cyber Privacy Protection Tech, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, consulting, Paris, Alexey Nazarov. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, Paris, Alexey Nazarov.</image:caption>
     </image:image>
   </url>
   <url>
@@ -70,7 +72,7 @@ sitemap:
     <image:image>
       <image:loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</image:loc>
       <image:title>Cyber Privacy Protection Tech Favicon</image:title>
-      <image:caption>Favicon of Cyber Privacy Protection Tech, representing cybersecurity and data protection services.</image:caption>
+      <image:caption>Favicon of Cyber Privacy Protection Tech, representing cybersecurity and data protection services, , consulting, Paris, Alexey Nazarov. Favicon de Cyber Privacy Protection Tech, représentant la cybersécurité et les services de protection des données, consulting, Paris, Alexey Nazarov. Favicon da Cyber Privacy Protection Tech, representando serviços de cibersegurança e proteção de dados, consultoria, Paris, Alexey Nazarov.</image:caption>
     </image:image>
   </url>
 </urlset>
