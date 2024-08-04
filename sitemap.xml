@@ -47,5 +47,23 @@ sitemap:
     </url>
     {% endif %}
   {% endfor %}
+  <url>
+    <loc>{{ site.url }}/assets/images/logo.png</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>{{ site.url }}/assets/images/logo.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>{{ site.url }}/assets/images/favicon.ico</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>{{ site.url }}/assets/images/favicon.ico</image:loc>
+    </image:image>
+  </url>
 </urlset>
 

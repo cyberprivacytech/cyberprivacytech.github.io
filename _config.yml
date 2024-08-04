@@ -22,7 +22,6 @@ defaults:
     values:
       layout: "home"
       lang: "fr"
-      last_modified_at: last_modified_at
 
 exclude:
   - Gemfile.lock
@@ -38,4 +37,6 @@ exclude:
 
 include:
   - sitemap.xml
+  - assets/images/logo.png
+  - assets/images/favicon.ico
 
