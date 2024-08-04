@@ -15,6 +15,8 @@ sitemap:
       {% if post.image %}
       <image:image>
         <image:loc>{{ post.image | absolute_url }}</image:loc>
+        <image:title>{{ post.title }}</image:title>
+        <image:caption>{{ post.excerpt }}</image:caption>
       </image:image>
       {% endif %}
     </url>
@@ -29,6 +31,8 @@ sitemap:
       {% if page.image %}
       <image:image>
         <image:loc>{{ page.image | absolute_url }}</image:loc>
+        <image:title>{{ page.title }}</image:title>
+        <image:caption>{{ page.excerpt }}</image:caption>
       </image:image>
       {% endif %}
     </url>
@@ -54,15 +58,19 @@ sitemap:
     <priority>0.5</priority>
     <image:image>
       <image:loc>{{ site.url }}/assets/images/logo.png</image:loc>
+      <image:title>Cyber Privacy Protection Tech Logo</image:title>
+      <image:caption>Logo of Cyber Privacy Protection Tech, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>{{ site.url }}/assets/images/favicon.ico</loc>
+    <loc>{{ site.url }}/favicon.ico</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>
-      <image:loc>{{ site.url }}/assets/images/favicon.ico</image:loc>
+      <image:loc>{{ site.url }}/favicon.ico</image:loc>
+      <image:title>Cyber Privacy Protection Tech Favicon</image:title>
+      <image:caption>Favicon of Cyber Privacy Protection Tech</image:caption>
     </image:image>
   </url>
 </urlset>
