@@ -19,9 +19,6 @@ end
 # GitHub Pages Gem
 gem "github-pages", "~> 227", group: :jekyll_plugins  # Compatible version with Ruby 2.7.4
 
-# Bundler Version
-gem "bundler", "~> 2.2.17"
-
 # Ensuring the correct version of Ruby is used
 ruby '2.7.4'
 
