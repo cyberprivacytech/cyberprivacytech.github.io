@@ -11,7 +11,7 @@ jobs:
 
     permissions:
       id-token: write
-      contents: write
+      contents: write  # Ensure you have write permissions to push the changes
 
     steps:
     - name: Checkout repository
@@ -31,6 +31,10 @@ jobs:
         gem install bundler -v 2.4.22
         bundle install
 
+    - name: Temporarily allow Gemfile.lock to be committed
+      run: |
+        sed -i '/Gemfile.lock/d' .gitignore
+
     - name: Commit Gemfile.lock
       run: |
         git config --global user.name 'github-actions[bot]'
@@ -38,6 +42,10 @@ jobs:
         git add Gemfile.lock
         git commit -m "Regenerate Gemfile.lock"
         git push
+
+    - name: Restore .gitignore
+      run: |
+        echo "Gemfile.lock" >> .gitignore
 
     - name: Build site
       run: bundle exec jekyll build --verbose --trace
