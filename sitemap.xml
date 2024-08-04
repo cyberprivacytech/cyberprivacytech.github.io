@@ -21,6 +21,7 @@ sitemap:
       {% endif %}
     </url>
   {% endfor %}
+  
   {% for page in site.pages %}
     {% unless page.sitemap.exclude == "yes" or page.url contains "assets" %}
     <url>
@@ -38,6 +39,7 @@ sitemap:
     </url>
     {% endunless %}
   {% endfor %}
+  
   {% for file in site.static_files %}
     {% if file.extname == ".png" or file.extname == ".jpg" or file.extname == ".jpeg" %}
     <url>
@@ -53,6 +55,8 @@ sitemap:
     </url>
     {% endif %}
   {% endfor %}
+  
+  <!-- Ensure logo is mentioned only once -->
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}/assets/images/logo.png</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
@@ -64,6 +68,8 @@ sitemap:
       <image:caption>Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in English. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português.</image:caption>
     </image:image>
   </url>
+  
+  <!-- Ensure favicon is mentioned only once -->
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
