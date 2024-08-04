@@ -3,6 +3,7 @@ layout: home
 title: ""
 lang: fr
 permalink: /
+last_modified_at: 2024-08-04T00:00:00+00:00
 ---
 
 # Bienvenue chez <span style="color: blue;">CyberPrivacy</span><span style="color: green;">ProtecTech</span>

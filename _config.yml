@@ -35,7 +35,6 @@ exclude:
   - .DS_Store
   - .jekyll-cache/
   - _site/
-  - assets/
 
 include:
   - sitemap.xml
