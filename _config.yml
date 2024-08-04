@@ -4,7 +4,7 @@ baseurl: "/CyberPrivacyProtecTech"
 url: "https://alexeinazarov.github.io"
 lang: fr
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-google_site_verification: nugRD-c5ncylSDYGlhWEtoZjSIK3mTw1j5zR9
+google-site-verification: nugRD-c5ncylSDYGIhWEtoZjSlK3mTw1j5zR9NUO3kc
 plugins:
 plugins:
   - jekyll-feed
