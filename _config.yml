@@ -1,3 +1,4 @@
+# _config.yml
 title: CyberPrivacyProtecTech
 description: "Sophisticated Cyber Security Consulting Services"
 baseurl: "/CyberPrivacyProtecTech"
@@ -9,6 +10,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 github_username: alexeinazarov
 google_analytics: G-91WCLQETXM
@@ -19,4 +21,6 @@ defaults:
     values:
       layout: "home"
       lang: "fr"
+include:
+  - sitemap.xml
 
