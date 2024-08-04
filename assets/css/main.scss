@@ -11,6 +11,9 @@ header {
   background: #333;
   color: #fff;
   padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header nav ul {
@@ -18,6 +21,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   padding: 0;
+  margin-bottom: 1rem;
 }
 
 header nav ul li {
@@ -29,18 +33,18 @@ header nav ul li a {
   text-decoration: none;
 }
 
-main {
-  padding: 2rem;
-}
-
 .logo-container {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.logo-container img {
-  max-width: 100%;
+.logo {
+  max-width: 100px; /* Adjust the size as needed */
   height: auto;
+}
+
+main {
+  padding: 2rem;
 }
 
 /* Recent Posts Section */
