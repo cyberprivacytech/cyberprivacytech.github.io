@@ -11,6 +11,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-include-cache
   - jekyll-seo-tag
+  - jekyll-last-modified-at
 
 github_username: alexeinazarov
 google_analytics: G-91WCLQETXM
@@ -21,6 +22,14 @@ defaults:
     values:
       layout: "home"
       lang: "fr"
+      last_modified_at: "{{ 'now' | date: '%Y-%m-%d' }}"
+
 include:
   - sitemap.xml
+
+exclude:
+  - assets/css
+  - assets/js
+  - node_modules
+  - vendor
 
