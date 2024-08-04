@@ -17,7 +17,7 @@ group :jekyll_plugins do
 end
 
 # GitHub Pages Gem
-gem "github-pages", "~> 227", group: :jekyll_plugins  # Compatible version with Ruby 2.7.4
+gem "github-pages", "~> 227", group: :jekyll_plugins
 
 # Ensuring the correct version of Ruby is used
 ruby '2.7.4'
