@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Core Gems
-gem "jekyll", "~> 4.2.0", :require => false
+gem "jekyll", "~> 3.9.2", :require => false  # Compatible with GitHub Pages
 
 # Jekyll Plugins
 gem "jekyll-feed"
@@ -17,14 +17,14 @@ group :jekyll_plugins do
 end
 
 # GitHub Pages Gem
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages", "~> 227", group: :jekyll_plugins  # Compatible version with Ruby 2.7.4
 
 # Bundler Version
 gem "bundler", "~> 2.5.17"
 
-# Ensuring the correct version of bundler is used
-ruby '3.2.4'
+# Ensuring the correct version of Ruby is used
+ruby '2.7.4'
 
-# Debugging Tools (only jekyll-debug is available)
+# Debugging Tools
 gem "jekyll-debug", :group => :jekyll_plugins
 
