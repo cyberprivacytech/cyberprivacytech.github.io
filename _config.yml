@@ -9,8 +9,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-include-cache
- include : 
-  - sitemap.xml
 
 github_username: alexeinazarov
 google_analytics: G-91WCLQETXM
