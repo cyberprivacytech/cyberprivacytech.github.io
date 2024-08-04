@@ -11,7 +11,7 @@ jobs:
 
     permissions:
       id-token: write
-      contents: write  # Ensure you have write permissions to push the changes
+      contents: write
 
     steps:
     - name: Checkout repository
@@ -28,7 +28,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        gem install bundler
+        gem install bundler -v 2.4.22
         bundle install
 
     - name: Commit Gemfile.lock
