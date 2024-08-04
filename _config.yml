@@ -8,6 +8,8 @@ google_site_verification: nugRD-c5ncylSDYGIhWEtoZjSlK3mTw1j5zR9NUO3kc
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+include : 
+  - sitemap.xml
 
 github_username: alexeinazarov
 google_analytics: G-91WCLQETXM
