@@ -53,5 +53,27 @@ sitemap:
     </url>
     {% endif %}
   {% endfor %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/assets/images/logo.png</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>{{ site.url }}{{ site.baseurl }}/assets/images/logo.png</image:loc>
+      <image:title>Cyber Privacy Protection Tech Logo</image:title>
+      <image:caption>Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in English. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</image:loc>
+      <image:title>Cyber Privacy Protection Tech Favicon</image:title>
+      <image:caption>Favicon of Cyber Privacy Protection Tech, representing cybersecurity and data protection services, Paris, Alexey Nazarov, cybersecurity consulting in Paris in English, consulting, conseil en cybersécurité à Paris. Favicon de Cyber Privacy Protection Tech, représentant la cybersécurité et les services de protection des données, consulting, Paris, Alexey Nazarov. Favicon da Cyber Privacy Protection Tech, representando serviços de cibersegurança e proteção de dados, consultoria, consultoria em cibersegurança em Paris em português</image:caption>
+    </image:image>
+  </url>
 </urlset>
 
