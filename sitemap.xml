@@ -1,13 +1,15 @@
 ---
-layout: none
+layout: null
+sitemap:
+  exclude: 'yes'
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   {% for post in site.posts %}
     <url>
-      <loc>{{ post.url | absolute_url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <loc>{{ post.url | absolute_url | remove: 'index.html' }}</loc>
+      <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
       {% if post.image %}
@@ -18,18 +20,31 @@ layout: none
     </url>
   {% endfor %}
   {% for page in site.pages %}
-    {% if page.sitemap != false %}
-      <url>
-        <loc>{{ page.url | absolute_url }}</loc>
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        {% if page.image %}
-        <image:image>
-          <image:loc>{{ page.image | absolute_url }}</image:loc>
-        </image:image>
-        {% endif %}
-      </url>
+    {% unless page.sitemap.exclude == "yes" or page.url contains "assets" %}
+    <url>
+      <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+      <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+      {% if page.image %}
+      <image:image>
+        <image:loc>{{ page.image | absolute_url }}</image:loc>
+      </image:image>
+      {% endif %}
+    </url>
+    {% endunless %}
+  {% endfor %}
+  {% for file in site.static_files %}
+    {% if file.extname == ".png" or file.extname == ".jpg" or file.extname == ".jpeg" or file.extname == ".ico" %}
+    <url>
+      <loc>{{ file.path | absolute_url }}</loc>
+      <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+      <image:image>
+        <image:loc>{{ file.path | absolute_url }}</image:loc>
+      </image:image>
+    </url>
     {% endif %}
   {% endfor %}
 </urlset>
