@@ -12,7 +12,6 @@
   
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   
- 
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
 
@@ -33,9 +32,9 @@
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
   
   <!-- Preload critical resources -->
-  <!-- link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" -->
   <link rel="preload" href="{{ '/assets/images/logo.webp' | relative_url }}" as="image">
-  <!-- link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"-->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"></noscript>
 
   <!-- Inline critical CSS -->
   <style>
@@ -96,16 +95,13 @@
     .logo {
       width: 211px;
       height: 211px;
+      loading: lazy;
     }
 
     main {
       padding: 2rem;
     }
   </style>
-
-  <!-- Deferred non-critical CSS -->
-  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
 
   <!-- Google Analytics -->
   {% include google-analytics.html %}
@@ -120,7 +116,6 @@
         <ul>
           {% for item in site.data.navigation.main %}
           <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-          <!-- li><a href="{{ item.url }}" style="color: {{ item.color }}">{{ item.title }}</a></li -->
           {% endfor %}
         </ul>
       </nav>
@@ -134,3 +129,4 @@
   </footer>
 </body>
 </html>
+
