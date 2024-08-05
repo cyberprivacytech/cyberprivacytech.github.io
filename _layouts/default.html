@@ -7,9 +7,10 @@
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="{{ site.description }}">
-  <meta name="keywords" content="cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Cybersecurity certification programs, IoT device security solutions, Cybersecurity training, Risk assessment in cybersecurity, Network firewall, Information security, Cyber threats, Security software, Security solutions, Vulnerability assessment, Website security, Cyber safety, Internet security software, Endpoint security, Advanced cybersecurity techniques, Data protection strategies, Digital security consulting services, Best practices for online privacy, Mobile app security measures, Cutting-edge encryption methods, Top cybersecurity certification programs, IoT device security best practices, Comprehensive cybersecurity training, In-depth risk assessment in cybersecurity, Sécurité informatique, Protection des données, Consultation en cybersécurité, Confidentialité en ligne, Sécurité des applications mobiles, Cryptographie avancée, Programmes de certification en cybersécurité, Solutions de sécurité pour les appareils IoT, Formation en cybersécurité, Évaluation des risques en cybersécurité, Pare-feu réseau, Sécurité de l'information, Menaces informatiques, Logiciel de sécurité, Solutions de sécurité, Évaluation de vulnérabilité, Sécurité des sites web, Sécurité en ligne, Logiciels de sécurité internet, Politique de sécurité, Techniques avancées de cybersécurité, Stratégies de protection des données, Services de consultation en sécurité numérique, Meilleures pratiques pour la confidentialité en ligne, Mesures de sécurité des applications mobiles, Méthodes de cryptographie avancée, Programmes de certification en sécurité informatique, Meilleures pratiques pour la sécurité des appareils IoT, Formation complète en cybersécurité, Évaluation approfondie des risques en cybersécurité, Segurança cibernética, Proteção de dados, Consultoria em segurança digital, Privacidade na internet, Segurança de aplicativos móveis, Criptografia avançada, Programas de certificação em cibersegurança, Soluções de segurança para dispositivos IoT, Treinamento em cibersegurança, Avaliação de risco de cibersegurança, Firewall de rede, Segurança da informação, Ameaças cibernéticas, Software de segurança, Soluções de segurança, Avaliação de vulnerabilidade, Segurança de sites, Segurança online, Software de segurança da internet, Política de segurança, Técnicas avançadas de segurança cibernética, Estratégias de proteção de dados, Serviços de consultoria em segurança digital, Melhores práticas para privacidade na internet, Medidas de segurança para aplicativos móveis, Métodos avançados de criptografia, Principais programas de certificação em cibersegurança, Melhores práticas para segurança de dispositivos IoT, Treinamento completo em cibersegurança, Avaliação aprofundada de risco em cibersegurança, Mises à jour de sécurité iOS, Fonctionnalités de confidentialité iOS, Protection des données iOS, Messagerie cryptée iOS, Navigation sécurisée iOS, Mises à jour de sécurité Android, Fonctionnalités de confidentialité Android, Protection des données Android, Messagerie cryptée Android, Navigation sécurisée Android, Mises à jour de sécurité Pixel, Fonctionnalités de confidentialité Pixel, Protection des données Pixel, Messagerie cryptée Pixel, Navigation sécurisée Pixel, Atualizações de segurança iOS, Recursos de privacidade iOS, Proteção de dados iOS, Mensagens criptografadas iOS, Navegação segura iOS, Atualizações de segurança Android, Recursos de privacidade Android, Proteção de dados Android, Mensagens criptografadas Android, Navegação segura Android, Atualizações de segurança Pixel, Recursos de privacidade Pixel, Proteção de dados Pixel, Mensagens criptografadas Pixel, Navegação segura Pixel, Artificial intelligence in cybersecurity, Machine learning for threat detection, AI-powered cybersecurity, Cybersecurity and machine learning, AI and cybersecurity trends 2024, Quantum computing in cybersecurity, Ransomware mitigation strategies, Supply chain risk management, Intelligence artificielle en cybersécurité, Apprentissage automatique pour la détection des menaces, Cybersécurité basée sur l'IA, Tendances en cybersécurité et IA 2024, Calcul quantique en cybersécurité, Stratégies d'atténuation des ransomwares, Gestion des risques de la chaîne d'approvisionnement, Inteligência artificial em cibersegurança, Aprendizado de máquina para detecção de ameaças, Cibersegurança baseada em IA, Tendências em cibersegurança e IA 2024, Computação quântica em cibersegurança, Estratégias de mitigação de ransomware, Gestão de riscos na cadeia de suprimentos, , Tor, Onion services, Hidden services, Dark web, Anonymity, Privacy tools, Tor network, Onion routing, Deep web, Secure browsing, Private browsing, Encrypted communication, Anonymous internet, Darknet markets, Darknet markets legal consulting, Darknet markets legal risks, Whistleblower protection, Surveillance evasion, Dark web forums, Secure messaging, Tor browser, Online anonymity, Tor hidden services, Onion websites, Privacy-centric sites">
+  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
   <meta name="author" content="Alexey Nazarov">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
 
@@ -17,26 +18,90 @@
   <meta property="og:title" content="{{ site.title }}">
   <meta property="og:description" content="{{ site.description }}">
   <meta property="og:url" content="{{ site.url }}">
-  <meta property="og:image" content="{{ site.url }}/assets/images/logo.png">
+  <meta property="og:image" content="{{ site.url }}/assets/images/logo.webp">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ site.title }}">
   <meta name="twitter:description" content="{{ site.description }}">
-  <meta name="twitter:image" content="{{ site.url }}/assets/images/logo.png">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/logo.webp">
 
   <!-- Favicon -->
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
-  
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  {% include google-analytics.html %}
+  <!-- Inline critical CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    header nav ul li {
+      margin: 0 1rem;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .logo {
+      max-width: 90px;
+      height: auto;
+      width: 90px;
+      height: 90px;
+    }
+
+    main {
+      padding: 2rem;
+    }
+  </style>
+
+  <!-- Deferred non-critical CSS -->
+  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
+
+  <!-- Google Analytics -->
+  {% if site.google_analytics %}
+  <script async defer src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
 </head>
 <body>
   <header>
     <div class="logo-container">
-      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Cyber Privacy Protection Tech Logo, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in english. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português, consultoria em cibersegurança em Paris em português" class="logo">
+      <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in english. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português, consultoria em cibersegurança em Paris em português" class="logo" width="90" height="90">
     </div>
     <nav>
       <ul>
