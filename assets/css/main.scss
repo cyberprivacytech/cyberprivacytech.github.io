@@ -10,7 +10,7 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 2rem 0 7rem 0; /* Increase bottom padding to make the header larger */
+  padding: 3rem 0; /* Increase padding to make the header larger */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin: 0; /* Remove margin-bottom */
+  margin: 1rem 0 0 0; /* Adjust margins */
 }
 
 header nav ul li {
