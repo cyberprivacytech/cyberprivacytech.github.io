@@ -10,11 +10,11 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 1.5rem 0; /* Increased padding */
+  padding: 2rem 0; /* Increase padding to make the grey area larger */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Ensure logo and nav are centered */
+  justify-content: center;
 }
 
 header nav ul {
@@ -22,7 +22,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin-top: 1rem; /* Added margin to push languages lower */
+  margin-top: 1rem; /* Ensure the languages are pushed down */
 }
 
 header nav ul li {
@@ -30,8 +30,12 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: lime; /* Default color for languages */
+  color: #fff; /* Default white color for navigation links */
   text-decoration: none;
+}
+
+header nav ul li a[href="Contact"] {
+  color: #fff; /* Ensure Contact link is white */
 }
 
 .logo-container {
@@ -40,10 +44,8 @@ header nav ul li a {
 }
 
 .logo {
-  max-width: 150px; /* Ensure logo has a max width */
+  max-width: 150px; /* Ensure the logo takes more space */
   height: auto;
-  width: 150px;
-  height: 150px;
 }
 
 main {
