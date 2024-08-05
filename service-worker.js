@@ -4,7 +4,6 @@ const urlsToCache = [
   '/index.html',
   '/assets/css/main.css',
   '/assets/images/logo.webp',
-  // Add other assets here
 ];
 
 self.addEventListener('install', event => {
