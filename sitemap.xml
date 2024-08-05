@@ -19,6 +19,9 @@ sitemap:
         <image:caption>{{ post.excerpt | strip_html | truncatewords: 20 }}</image:caption>
       </image:image>
       {% endif %}
+      {% if post.keywords %}
+      <keywords>{{ post.keywords }}</keywords>
+      {% endif %}
     </url>
   {% endfor %}
   {% for page in site.pages %}
@@ -34,6 +37,9 @@ sitemap:
         <image:title>{{ page.title }}</image:title>
         <image:caption>{{ page.excerpt | strip_html | truncatewords: 20 }}</image:caption>
       </image:image>
+      {% endif %}
+      {% if page.keywords %}
+      <keywords>{{ page.keywords }}</keywords>
       {% endif %}
     </url>
     {% endunless %}
