@@ -67,7 +67,7 @@ sitemap:
       <image:image>
         <image:loc>{{ site.url }}{{ site.baseurl }}{{ file.path | remove: 'index.html' }}</image:loc>
         <image:title>{{ file.basename | replace: '-', ' ' | capitalize }}</image:title>
-        <image:caption>{{ file.basename | replace: '-', ' ' | capitalize }}</image:caption>
+        <image:caption>{{ file.basename | replace: '-', ' ' | capitalize }}, CyberPrivacyProtecTech, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov</image:caption>
       </image:image>
     </url>
     {% endif %}
@@ -77,6 +77,9 @@ sitemap:
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <keywords>
+      Logo, CyberPrivacyProtecTech, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov
+    </keywords>
     <image:image>
       <image:loc>{{ site.url }}{{ site.baseurl }}/assets/images/logo.png</image:loc>
       <image:title>Cyber Privacy Protection Tech Logo</image:title>
@@ -88,6 +91,9 @@ sitemap:
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <keywords>
+      Favicon, CyberPrivacyProtecTech, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov
+    </keywords>
     <image:image>
       <image:loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</image:loc>
       <image:title>Cyber Privacy Protection Tech Favicon</image:title>
