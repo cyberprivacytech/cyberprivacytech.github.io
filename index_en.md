@@ -4,6 +4,7 @@ lang: en
 title: ""
 permalink: /index_en/
 last_modified_at: 2024-08-04T00:00:00+00:00
+keywords: "cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, digital security, cryptography, artificial intelligence, machine learning, data protection, security audit, penetration testing, MAC and IP address rotation, containerization, virtualization, sandboxing, encryption services, vulnerability analysis, smartphone privacy, cybersecurity consulting, cybersecurity in Paris, mobile device security, Android security, Android penetration testing, iOS security, mobile app security"
 ---
 
 # Welcome to <span style="color: blue;">CyberPrivacy</span><span style="color: green;">ProtecTech</span>
