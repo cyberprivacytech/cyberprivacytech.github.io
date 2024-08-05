@@ -10,7 +10,7 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 3rem 0; /* Increase padding to make the header larger */
+  padding: 2rem 0; /* Increase padding to make the header larger */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin: 1rem 0 0 0; /* Adjust margins */
+  margin: 0;
 }
 
 header nav ul li {
@@ -39,11 +39,11 @@ header nav ul li a:last-child {
 
 .logo-container {
   text-align: center;
-  margin-bottom: 0; /* Remove bottom margin */
+  margin-bottom: 1rem;
 }
 
 .logo {
-  max-width: 150px; /* Increase size */
+  max-width: 150px;
   height: auto;
 }
 

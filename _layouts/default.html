@@ -42,10 +42,22 @@
     header {
       background: #333;
       color: #fff;
-      padding: 3rem 0; /* Increase padding to make the header larger */
+      padding: 1rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    header nav {
+      margin-top: 1rem;
     }
 
     header nav ul {
@@ -53,7 +65,7 @@
       display: flex;
       justify-content: center;
       padding: 0;
-      margin: 1rem 0 0 0; /* Adjust margins */
+      margin: 0;
     }
 
     header nav ul li {
@@ -71,11 +83,10 @@
 
     .logo-container {
       text-align: center;
-      margin-bottom: 0; /* Remove bottom margin */
     }
 
     .logo {
-      max-width: 150px; /* Increase size */
+      max-width: 150px;
       height: auto;
     }
 
@@ -101,16 +112,18 @@
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo" class="logo" width="150" height="150">
+    <div class="header-inner">
+      <div class="logo-container">
+        <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo" class="logo">
+      </div>
+      <nav>
+        <ul>
+          {% for item in site.data.navigation.main %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        {% for item in site.data.navigation.main %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
   </header>
   <main>
     {{ content }}
