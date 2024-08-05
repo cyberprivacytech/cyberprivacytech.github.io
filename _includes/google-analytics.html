@@ -1,8 +1,8 @@
 {% if site.google_analytics %}
-<!-- Load Google Tag Manager Asynchronously -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
-  window.addEventListener('load', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());

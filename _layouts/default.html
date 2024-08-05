@@ -12,6 +12,7 @@
   
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   
+ 
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
 
@@ -75,16 +76,12 @@
     }
 
     header nav ul li a {
-      color: #00FF00; /* Green for language names */
+      color: #00ff00; /* More contrasting color */
       text-decoration: none;
     }
 
-    header nav ul li a:hover {
-      color: #FFA500; /* Orange on hover for better visibility */
-    }
-
     header nav ul li a:last-child {
-      color: #FFFFFF; /* White for 'Contact' */
+      color: #fff; /* Specific color for the 'Contact' link */
     }
 
     .logo-container {
@@ -92,8 +89,8 @@
     }
 
     .logo {
-      width: 150px;
-      height: 150px;
+      width: 193px;
+      height: auto;
     }
 
     main {
@@ -105,7 +102,16 @@
   <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
 
-  {% include google-analytics.html %}
+  <!-- Google Analytics -->
+  {% if site.google_analytics %}
+  <script async defer src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
 </head>
 <body>
   <header>
@@ -128,15 +134,5 @@
   <footer>
     <p>&copy; {{ site.title }}</p>
   </footer>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        console.log('ServiceWorker registration failed: ', err);
-      });
-    }
-  </script>
 </body>
 </html>
-
