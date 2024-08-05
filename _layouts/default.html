@@ -33,8 +33,6 @@
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
   
   <!-- Preload critical resources -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
   <link rel="preload" href="{{ '/assets/images/logo.webp' | relative_url }}" as="image">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
@@ -124,20 +122,19 @@
   <header>
     <div class="header-inner">
       <div class="logo-container">
-        <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in english. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português, consultoria em cibersegurança em Paris em português" class="logo" width="193" height="auto" loading="eager">
+        <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in english. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português, consultoria em cibersegurança em Paris em português" class="logo" width="579" height="579" loading="eager">
       </div>
       <nav>
         <ul>
           {% for item in site.data.navigation.main %}
           <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-  <!--   <li><a href="{{ item.url }}" style="color: {{ item.color }}">{{ item.title }}</a></li>-->
+          <!-- li><a href="{{ item.url }}" style="color: {{ item.color }}">{{ item.title }}</a></li -->
           {% endfor %}
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <p>Chez CyberPrivacyProtecTech, nous croyons en votre droit de contrôler votre propriété intellectuelle et vos données personnelles.</p>
     {{ content }}
   </main>
   <footer>
