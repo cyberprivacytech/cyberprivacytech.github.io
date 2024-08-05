@@ -9,7 +9,6 @@
   <meta name="keywords" content="{{ page.keywords | append: ', ' | append: site.keywords | strip }}">
   <meta name="author" content="Alexey Nazarov">
   <meta name="description" content="CyberPrivacyProtecTech offers expert cybersecurity consulting services in Paris, specializing in data protection, privacy, and cryptography. Led by Alexey Nazarov, our team leverages advanced AI and ML techniques to ensure your digital security.">
-  
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   
   <!-- Google Site Verification -->
@@ -31,7 +30,7 @@
   <!-- Favicon -->
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
 
-<!-- Inline critical CSS -->
+  <!-- Inline critical CSS -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -124,6 +123,14 @@
   <footer>
     <p>&copy; {{ site.title }}</p>
   </footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+  </script>
 </body>
 </html>
-
