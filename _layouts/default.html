@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ page.lang }}">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,6 @@
   
   <!-- SEO Meta Tags -->
   <meta name="keywords" content="{{ page.keywords | append: ', ' | append: site.keywords | strip }}">
-  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
   <meta name="author" content="Alexey Nazarov">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   
@@ -43,7 +42,7 @@
     header {
       background: #333;
       color: #fff;
-      padding: 1rem 0;
+      padding: 2rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -72,10 +71,10 @@
     }
 
     .logo {
-      max-width: 90px;
+      max-width: 150px;
       height: auto;
-      width: 90px;
-      height: 90px;
+      width: 150px;
+      height: 150px;
     }
 
     main {

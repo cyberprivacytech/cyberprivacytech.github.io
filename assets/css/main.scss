@@ -10,7 +10,7 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 1rem 0;
+  padding: 2rem 0; /* Increase padding to match the inline critical CSS */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,8 +39,10 @@ header nav ul li a {
 }
 
 .logo {
-  max-width: 90px;
+  max-width: 150px; /* Increase max-width to match the inline critical CSS */
   height: auto;
+  width: 150px; /* Ensure the width is set to match the inline critical CSS */
+  height: 150px; /* Ensure the height is set to match the inline critical CSS */
 }
 
 main {
@@ -65,7 +67,7 @@ main {
   padding: 0;
 }
 
-.recent-posts ul li {
+reRecent-posts ul li {
   margin-bottom: 0.5rem;
 }
 
