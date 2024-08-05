@@ -23,6 +23,7 @@ defaults:
     values:
       layout: "home"
       lang: "fr"
+      keywords: ""
 
 exclude:
   - Gemfile.lock
