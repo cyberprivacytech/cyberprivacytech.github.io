@@ -10,7 +10,7 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 2rem 0; /* Increase padding to match the inline critical CSS */
+  padding: 2rem 0; /* Increase padding to 2rem to increase height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin-bottom: 1rem;
+  margin-top: 2rem; /* Add margin-top to push down the navigation links */
 }
 
 header nav ul li {
@@ -39,10 +39,10 @@ header nav ul li a {
 }
 
 .logo {
-  max-width: 150px; /* Increase max-width to match the inline critical CSS */
+  max-width: 150px;
   height: auto;
-  width: 150px; /* Ensure the width is set to match the inline critical CSS */
-  height: 150px; /* Ensure the height is set to match the inline critical CSS */
+  width: 150px;
+  height: 150px;
 }
 
 main {
@@ -67,7 +67,7 @@ main {
   padding: 0;
 }
 
-reRecent-posts ul li {
+.recent-posts ul li {
   margin-bottom: 0.5rem;
 }
 
