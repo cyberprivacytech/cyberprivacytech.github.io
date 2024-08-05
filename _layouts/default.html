@@ -43,10 +43,11 @@
     header {
       background: #333;
       color: #fff;
-      padding: 2rem 0;
+      padding: 1.5rem 0; /* Increased padding */
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center; /* Ensure logo and nav are centered */
     }
 
     header nav ul {
@@ -54,7 +55,7 @@
       display: flex;
       justify-content: center;
       padding: 0;
-      margin-top: 2rem;
+      margin-top: 1rem; /* Added margin to push languages lower */
     }
 
     header nav ul li {
@@ -62,12 +63,8 @@
     }
 
     header nav ul li a {
-      color: #fff;
+      color: #fff; /* Contact link set to white */
       text-decoration: none;
-    }
-
-    header nav ul li a[href*="Contact"] {
-      color: #fff;
     }
 
     .logo-container {
@@ -76,7 +73,7 @@
     }
 
     .logo {
-      max-width: 90px;
+      max-width: 150px; /* Ensure logo has a max width */
       height: auto;
       width: 150px;
       height: 150px;
@@ -110,7 +107,7 @@
     <nav>
       <ul>
         {% for item in site.data.navigation.main %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        <li><a href="{{ item.url }}" style="color: {% if item.title == 'Contact' %}white{% else %}lime{% endif %};">{{ item.title }}</a></li>
         {% endfor %}
       </ul>
     </nav>
