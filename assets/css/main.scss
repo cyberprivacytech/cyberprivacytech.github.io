@@ -10,7 +10,7 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 2rem 0; /* Increase padding to 2rem to increase height */
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin-top: 2rem; /* Add margin-top to push down the navigation links */
+  margin: 0;
 }
 
 header nav ul li {
@@ -29,7 +29,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #00FF00; /* Contrasting color for better visibility */
   text-decoration: none;
 }
 
@@ -39,8 +39,6 @@ header nav ul li a {
 }
 
 .logo {
-  max-width: 150px;
-  height: auto;
   width: 150px;
   height: 150px;
 }
