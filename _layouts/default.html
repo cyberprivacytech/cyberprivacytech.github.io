@@ -12,7 +12,6 @@
   
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   
- 
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
 
@@ -33,9 +32,9 @@
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
   
   <!-- Preload critical resources -->
-  <!-- link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" -->
   <link rel="preload" href="{{ '/assets/images/logo.webp' | relative_url }}" as="image">
-  <!-- link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"-->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"></noscript>
 
   <!-- Inline critical CSS -->
   <style>
@@ -96,6 +95,7 @@
     .logo {
       width: 211px;
       height: 211px;
+      loading: lazy;
     }
 
     main {
@@ -104,23 +104,35 @@
   </style>
 
   <!-- Deferred non-critical CSS -->
-  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
 
   <!-- Google Analytics -->
   {% include google-analytics.html %}
+
+  <!-- Register Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </head>
 <body>
   <header>
     <div class="header-inner">
       <div class="logo-container">
-        <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in english. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português, consultoria em cibersegurança em Paris em português" class="logo" width="211" height="211" loading="eager">
+        <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in english. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português, consultoria em cibersegurança em Paris em português" class="logo" width="211" height="211" loading="lazy">
       </div>
       <nav>
         <ul>
           {% for item in site.data.navigation.main %}
           <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-          <!-- li><a href="{{ item.url }}" style="color: {{ item.color }}">{{ item.title }}</a></li -->
           {% endfor %}
         </ul>
       </nav>
@@ -134,3 +146,4 @@
   </footer>
 </body>
 </html>
+
