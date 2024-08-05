@@ -9,6 +9,7 @@
   <meta name="keywords" content="{{ page.keywords | append: ', ' | append: site.keywords | strip }}">
   <meta name="author" content="Alexey Nazarov">
   <meta name="description" content="CyberPrivacyProtecTech offers expert cybersecurity consulting services in Paris, specializing in data protection, privacy, and cryptography. Led by Alexey Nazarov, our team leverages advanced AI and ML techniques to ensure your digital security.">
+  
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   
   <!-- Google Site Verification -->
@@ -74,8 +75,12 @@
     }
 
     header nav ul li a {
-      color: #00FFFF; /* Cyan for high contrast */
+      color: #FFFF00; /* Yellow for high contrast */
       text-decoration: none;
+    }
+
+    header nav ul li a:hover {
+      color: #FFA500; /* Orange on hover for better visibility */
     }
 
     header nav ul li a:last-child {
@@ -99,11 +104,6 @@
   <!-- Deferred non-critical CSS -->
   <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
-
-
-
-
-
 
   {% include google-analytics.html %}
 </head>
@@ -139,3 +139,4 @@
   </script>
 </body>
 </html>
+
