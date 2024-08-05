@@ -14,6 +14,7 @@ sitemap:
     <keywords>
       cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, sécurité numérique, cryptographie, intelligence artificielle, machine learning, protection des données, audit de sécurité, tests de pénétration, rotation d'adresse MAC et IP, containerisation, virtualisation, sandboxing, services de chiffrement, analyse des vulnérabilités, confidentialité des smartphones, consulting en cybersécurité, cybersécurité à Paris, sécurité des appareils mobiles, sécurité Android, tests de pénétration Android, sécurité iOS, sécurité des applications mobiles
     </keywords>
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/" />
   </url>
   {% for post in site.posts %}
     <url>
@@ -31,6 +32,7 @@ sitemap:
       {% if post.keywords %}
       <keywords>{{ post.keywords }}</keywords>
       {% endif %}
+      <link rel="canonical" href="{{ post.url | absolute_url }}" />
     </url>
   {% endfor %}
   {% for page in site.pages %}
@@ -50,6 +52,7 @@ sitemap:
       {% if page.keywords %}
       <keywords>{{ page.keywords }}</keywords>
       {% endif %}
+      <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | remove: 'index.html' }}" />
     </url>
     {% endunless %}
   {% endfor %}
@@ -68,6 +71,7 @@ sitemap:
         <image:title>{{ file.basename | replace: '-', ' ' | capitalize }}</image:title>
         <image:caption>{{ file.basename | replace: '-', ' ' | capitalize }}, CyberPrivacyProtecTech, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov</image:caption>
       </image:image>
+      <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ file.path | remove: 'index.html' }}" />
     </url>
     {% endif %}
   {% endfor %}
@@ -84,6 +88,7 @@ sitemap:
       <image:title>Cyber Privacy Protection Tech Logo</image:title>
       <image:caption>Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in English. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português</image:caption>
     </image:image>
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/assets/images/logo.png" />
   </url>
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</loc>
@@ -98,6 +103,7 @@ sitemap:
       <image:title>Cyber Privacy Protection Tech Favicon</image:title>
       <image:caption>Favicon of Cyber Privacy Protection Tech, representing cybersecurity and data protection services, Paris, Alexey Nazarov, cybersecurity consulting in Paris in English, consulting, conseil en cybersécurité à Paris. Favicon de Cyber Privacy Protection Tech, représentant la cybersécurité et les services de protection des données, consulting, Paris, Alexey Nazarov. Favicon da Cyber Privacy Protection Tech, representando serviços de cibersegurança e proteção de dados, consultoria, consultoria em cibersegurança em Paris em português</image:caption>
     </image:image>
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/favicon.ico" />
   </url>
 </urlset>
 
