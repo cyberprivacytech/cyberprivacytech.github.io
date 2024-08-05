@@ -7,6 +7,7 @@
   
   <!-- SEO Meta Tags -->
   <meta name="keywords" content="{{ page.keywords | append: ', ' | append: site.keywords | strip }}">
+  <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Alexey Nazarov">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   
@@ -53,7 +54,7 @@
       display: flex;
       justify-content: center;
       padding: 0;
-      margin: 0;
+      margin-top: 2rem;
     }
 
     header nav ul li {
@@ -61,8 +62,12 @@
     }
 
     header nav ul li a {
-      color: #00FF00; /* Contrasting color for better visibility */
+      color: #fff;
       text-decoration: none;
+    }
+
+    header nav ul li a[href*="Contact"] {
+      color: #fff;
     }
 
     .logo-container {
@@ -71,6 +76,8 @@
     }
 
     .logo {
+      max-width: 90px;
+      height: auto;
       width: 150px;
       height: 150px;
     }
