@@ -100,8 +100,8 @@ sitemap:
     </keywords>
     <image:image>
       <image:loc>{{ site.url }}{{ site.baseurl }}/favicon.ico</image:loc>
-      <image:title>Cyber Privacy Protection Tech Favicon</image:title>
-      <image:caption>Favicon of Cyber Privacy Protection Tech, representing cybersecurity and data protection services, Paris, Alexey Nazarov, cybersecurity consulting in Paris in English, consulting, conseil en cybersécurité à Paris. Favicon de Cyber Privacy Protection Tech, représentant la cybersécurité et les services de protection des données, consulting, Paris, Alexey Nazarov. Favicon da Cyber Privacy Protection Tech, representando serviços de cibersegurança e proteção de dados, consultoria, consultoria em cibersegurança em Paris em português</image:caption>
+      <image:title>CyberPrivacyProtectionTech Favicon</image:title>
+      <image:caption>Favicon of CyberPrivacyProtectionTech, representing cybersecurity and data protection services, Paris, Alexey Nazarov, cybersecurity consulting in Paris in English, consulting, conseil en cybersécurité à Paris. Favicon de Cyber Privacy Protection Tech, représentant la cybersécurité et les services de protection des données, consulting, Paris, Alexey Nazarov. Favicon da Cyber Privacy Protection Tech, representando serviços de cibersegurança e proteção de dados, consultoria, consultoria em cibersegurança em Paris em português</image:caption>
     </image:image>
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/favicon.ico" />
   </url>
