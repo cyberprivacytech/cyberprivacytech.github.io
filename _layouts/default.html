@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 <head>
   <meta charset="UTF-8">
@@ -6,10 +6,11 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="{{ site.description }}">
   <meta name="keywords" content="{{ page.keywords | append: ', ' | append: site.keywords | strip }}">
+  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
   <meta name="author" content="Alexey Nazarov">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
 
@@ -28,8 +29,63 @@
 
   <!-- Favicon -->
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
-  
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Inline critical CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    header nav ul li {
+      margin: 0 1rem;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .logo {
+      max-width: 90px;
+      height: auto;
+      width: 90px;
+      height: 90px;
+    }
+
+    main {
+      padding: 2rem;
+    }
+  </style>
+
+  <!-- Deferred non-critical CSS -->
+  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
 
   <!-- Google Analytics -->
   {% if site.google_analytics %}
@@ -45,7 +101,7 @@
 <body>
   <header>
     <div class="logo-container">
-      <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in English. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português, consultoria em cibersegurança em Paris em português" class="logo" width="90" height="90">
+      <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech, Cyber, Privacy, ProtecTech, Cyber Privacy, Logo of Cyber Privacy Protection Tech, conseil en cybersécurité à Paris, cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, cybersecurity consulting in Paris in english. Logo de Cyber Privacy Protection Tech, cybersécurité, confidentialité, protection des données, Paris. Logotipo da Cyber Privacy Protection Tech, cibersegurança, privacidade, proteção de dados, consultoria, consultoria em segurança cibernética em Paris em português, consultoria em cibersegurança em Paris em português" class="logo" width="150" height="150">
     </div>
     <nav>
       <ul>
