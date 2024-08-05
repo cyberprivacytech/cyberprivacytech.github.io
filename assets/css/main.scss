@@ -1,4 +1,3 @@
-/* Main Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -41,12 +40,12 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #0f0; /* More contrasting color */
+  color: #00FFFF; /* Cyan for high contrast */
   text-decoration: none;
 }
 
 header nav ul li a:last-child {
-  color: #fff; /* Specific color for the 'Contact' link */
+  color: #FFFFFF; /* White for 'Contact' */
 }
 
 .logo-container {
@@ -54,52 +53,11 @@ header nav ul li a:last-child {
 }
 
 .logo {
-  max-width: 150px;
-  height: auto;
+  width: 150px;
+  height: 150px;
 }
 
 main {
   padding: 2rem;
-}
-
-/* Recent Posts Section */
-.recent-posts {
-  background: #f4f4f4;
-  padding: 1rem;
-  border-radius: 5px;
-  margin-top: 2rem;
-}
-
-.recent-posts h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.recent-posts ul {
-  list-style: none;
-  padding: 0;
-}
-
-.recent-posts ul li {
-  margin-bottom: 0.5rem;
-}
-
-.recent-posts ul li a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.recent-posts ul li a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #333;
-  color: #fff;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
 }
 
