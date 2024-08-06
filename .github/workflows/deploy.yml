@@ -96,6 +96,18 @@ jobs:
         echo "Verifying contents of _site directory before deployment:"
         find _site
 
+    - name: Commit and push changes to gh-pages branch
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add _site/sitemap.xml
+        if [ -n "$(git status --porcelain)" ]; then
+          git commit -m "Deploy updated sitemap"
+          git push origin gh-pages
+        else
+          echo "No changes to commit"
+        fi
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
