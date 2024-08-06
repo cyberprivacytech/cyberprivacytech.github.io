@@ -31,7 +31,7 @@ jobs:
 
     - name: Remove Gemfile.lock
       run: |
-        if [ -f Gemfile.lock ];then rm Gemfile.lock; fi
+        if [ -f Gemfile.lock ]; then rm Gemfile.lock; fi
 
     - name: Install dependencies
       run: |
@@ -78,7 +78,8 @@ jobs:
     - name: Verify and add custom sitemap
       run: |
         if [ -f custom_sitemap.xml ]; then
-          echo "Custom sitemap found, copying to _site directory."
+          echo "Custom sitemap found, touching and copying to _site directory."
+          touch custom_sitemap.xml  # Update the timestamp
           cp custom_sitemap.xml _site/sitemap.xml
         else
           echo "Custom sitemap not found!"
@@ -105,4 +106,8 @@ jobs:
     - name: Clear GitHub Pages cache
       run: |
         curl -X PURGE https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
+
+    - name: Curl deployed sitemap
+      run: |
+        curl -I https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
 
