@@ -25,4 +25,3 @@ jobs:
         git add .
         git commit -m "Deploy from gh-pages" || echo "No changes to commit"
         git push origin gh-pages
-
