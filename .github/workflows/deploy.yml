@@ -91,17 +91,36 @@ jobs:
         echo "Verifying contents of _site directory before deployment:"
         find _site
 
+    - name: Create or update gh-pages branch
+      run: |
+        set -e
+        echo "Fetching origin..."
+        git fetch origin
+        if ! git show-ref --verify --quiet refs/heads/gh-pages; then
+          echo "gh-pages branch does not exist, creating it..."
+          git checkout --orphan gh-pages
+          git reset --hard
+          git commit --allow-empty -m "Initial gh-pages commit"
+          git push origin gh-pages || (echo "Push failed, retrying with --force" && git push --force origin gh-pages)
+          git checkout main
+        else
+          echo "gh-pages branch exists"
+          git checkout gh-pages
+          git pull origin gh-pages || (echo "Pull failed, resetting to origin/gh-pages" && git reset --hard origin/gh-pages)
+          git checkout main
+        fi
+
     - name: Commit and push changes to gh-pages branch
       run: |
         set -e
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout gh-pages || git checkout -b gh-pages
+        git checkout gh-pages
         git pull origin gh-pages || git reset --hard origin/gh-pages
         git add -f _site/sitemap.xml
         if [ -n "$(git status --porcelain)" ]; then
           git commit -m "Deploy updated sitemap"
-          git push origin gh-pages --force
+          git push origin gh-pages --force || (echo "Push failed, retrying with --force" && git push --force origin gh-pages)
         else
           echo "No changes to commit"
         fi
@@ -113,11 +132,18 @@ jobs:
         publish_dir: ./_site
         keep_files: true
 
+    - name: Verify sitemap on server
+      run: |
+        echo "Checking deployed sitemap on server:"
+        curl -I https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
+
     - name: Clear GitHub Pages cache
       run: |
+        echo "Clearing GitHub Pages cache for sitemap:"
         curl -X PURGE https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
 
-    - name: Curl deployed sitemap
+    - name: Verify sitemap after cache clear
       run: |
+        echo "Checking deployed sitemap on server after cache clear:"
         curl -I https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
 
