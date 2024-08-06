@@ -19,10 +19,10 @@ jobs:
       with:
         fetch-depth: 0  # Ensure full repository is checked out
 
-    - name: List important directories before checkout
+    - name: List project files before checkout
       run: |
-        echo "Listing important directories before checkout:"
-        ls -R /path/to/important/directories
+        echo "Listing project files before checkout:"
+        ls -R .
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -31,7 +31,7 @@ jobs:
 
     - name: Remove Gemfile.lock
       run: |
-        if [ -f Gemfile.lock ]; then rm Gemfile.lock; fi
+        if [ -f Gemfile.lock ];then rm Gemfile.lock; fi
 
     - name: Install dependencies
       run: |
@@ -61,7 +61,7 @@ jobs:
     - name: List files after checkout
       run: |
         echo "Listing files after checkout:"
-        ls -R /path/to/important/directories
+        ls -R .
 
     - name: Build site
       run: bundle exec jekyll build --verbose --trace
