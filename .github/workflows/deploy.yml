@@ -132,11 +132,16 @@ jobs:
         publish_dir: ./_site
         keep_files: true
 
+    - name: Verify sitemap on server
+      run: |
+        echo "Checking deployed sitemap on server:"
+        curl -I https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
+
     - name: Clear GitHub Pages cache
       run: |
         curl -X PURGE https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
 
-    - name: Curl deployed sitemap
+    - name: Curl deployed sitemap after cache clear
       run: |
         curl -I https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
 
