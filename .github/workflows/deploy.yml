@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -72,7 +76,7 @@ jobs:
 
     - name: Verify and add custom sitemap
       run: |
-        if [ -f custom_sitemap.xml ]; then
+        if [ -f custom_sitemap.xml]; then
           echo "Custom sitemap found, touching and copying to _site directory."
           touch custom_sitemap.xml  # Update the timestamp
           cp custom_sitemap.xml _site/sitemap.xml
