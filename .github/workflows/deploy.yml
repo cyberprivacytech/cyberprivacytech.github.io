@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -12,16 +16,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     permissions:
       id-token: write
-      contents: write  # Ensure you have write permissions to push the changes
+      contents: write
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 0  # Ensure full repository is checked out
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -76,7 +77,7 @@ jobs:
 
     - name: Verify and add custom sitemap
       run: |
-        if [ -f custom_sitemap.xml]; then
+        if [ -f custom_sitemap.xml ]; then
           echo "Custom sitemap found, touching and copying to _site directory."
           touch custom_sitemap.xml  # Update the timestamp
           cp custom_sitemap.xml _site/sitemap.xml
@@ -99,46 +100,13 @@ jobs:
       run: echo "SITE_PATH=$(realpath _site)" >> $GITHUB_ENV
 
     - name: Display SITE_PATH
-      run: echo "SITE_PATH: $SITE_PATH"
-
-    - name: Create or update gh-pages branch
-      run: |
-        set -e
-        echo "Fetching origin..."
-        git fetch origin
-        if ! git show-ref --verify --quiet refs/heads/gh-pages; then
-          echo "gh-pages branch does not exist, creating it..."
-          git checkout --orphan gh-pages
-          git reset --hard
-          git commit --allow-empty -m "Initial gh-pages commit"
-          git push origin gh-pages || (echo "Push failed, retrying with --force" && git push --force origin gh-pages)
-          git checkout main
-        else
-          echo "gh-pages branch exists"
-          git checkout gh-pages
-          git pull origin gh-pages || (echo "Pull failed, resetting to origin/gh-pages" && git reset --hard origin/gh-pages)
-          git checkout main
-        fi
-
-    - name: Commit and push changes to gh-pages branch
-      run: |
-        set -e
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout gh-pages
-        git pull origin gh-pages || git reset --hard origin/gh-pages
-        git add -f _site/sitemap.xml
-        if [ -n "$(git status --porcelain)" ]; then
-          git commit -m "Deploy updated sitemap"
-          git push origin gh-pages --force || (echo "Push failed, retrying with --force" && git push --force origin gh-pages)
-        else
-          echo "No changes to commit"
-        fi
+      run: echo "SITE_PATH: ${{ env.SITE_PATH }}"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
         publish_dir: ${{ env.SITE_PATH }}
         keep_files: true
 
@@ -156,4 +124,3 @@ jobs:
       run: |
         echo "Checking deployed sitemap on server after cache clear:"
         curl -I https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
-
