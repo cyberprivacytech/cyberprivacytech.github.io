@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
-      contents: write  # Ensure you have write permissions to push the changes
+      contents: write
 
     steps:
     - name: Checkout repository
