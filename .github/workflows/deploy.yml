@@ -31,7 +31,7 @@ jobs:
 
     - name: Remove Gemfile.lock
       run: |
-        if [ -f Gemfile.lock ]; then rm Gemfile.lock; fi
+        if [ -f Gemfile.lock ];then rm Gemfile.lock; fi
 
     - name: Install dependencies
       run: |
@@ -75,9 +75,15 @@ jobs:
       run: |
         rm -f _site/sitemap.xml
 
-    - name: Add custom sitemap
+    - name: Verify and add custom sitemap
       run: |
-        cp _site/custom_sitemap.xml _site/sitemap.xml
+        if [ -f custom_sitemap.xml ]; then
+          echo "Custom sitemap found, copying to _site directory."
+          cp custom_sitemap.xml _site/sitemap.xml
+        else
+          echo "Custom sitemap not found!"
+          exit 1
+        fi
 
     - name: List files in _site directory after adding custom sitemap
       run: |
@@ -89,8 +95,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
-        exclude_assets: |
-          sitemap.xml
 
     - name: Clear GitHub Pages cache
       run: |
