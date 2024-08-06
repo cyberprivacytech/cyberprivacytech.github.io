@@ -92,10 +92,12 @@ jobs:
         find _site
 
     - name: Get absolute path of _site directory
-      run: echo "path=$(realpath _site)" >> $GITHUB_OUTPUT
+      run: |
+        echo "SITE_PATH=$(realpath _site)" >> $GITHUB_ENV
 
-    - name: Display GITHUB_OUTPUT file
-      run: cat $GITHUB_OUTPUT
+    - name: Display SITE_PATH
+      run: |
+        echo "SITE_PATH: $SITE_PATH"
 
     - name: Create or update gh-pages branch
       run: |
@@ -135,7 +137,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ${{ steps.get-absolute-path.outputs.path }}
+        publish_dir: ${{ env.SITE_PATH }}
         keep_files: true
 
     - name: Verify sitemap on server
