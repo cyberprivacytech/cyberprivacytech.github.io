@@ -18,10 +18,10 @@ jobs:
       with:
         ref: gh-pages
 
-    - name: Deploy to GitHub Pages
+    - name: Force Add and Commit Changes
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
+        git add -A
         git commit -m "Deploy from gh-pages" || echo "No changes to commit"
         git push origin gh-pages
