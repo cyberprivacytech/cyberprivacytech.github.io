@@ -139,9 +139,11 @@ jobs:
 
     - name: Clear GitHub Pages cache
       run: |
+        echo "Clearing GitHub Pages cache for sitemap:"
         curl -X PURGE https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
 
-    - name: Curl deployed sitemap after cache clear
+    - name: Verify sitemap after cache clear
       run: |
+        echo "Checking deployed sitemap on server after cache clear:"
         curl -I https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
 
