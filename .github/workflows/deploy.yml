@@ -16,8 +16,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -55,10 +53,6 @@ jobs:
 
     - name: Build site
       run: bundle exec jekyll build --verbose --trace
-
-    - name: Replace the generated sitemap with custom sitemap
-      run: |
-        mv _site/custumsitemap.xml _site/sitemap.xml
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
