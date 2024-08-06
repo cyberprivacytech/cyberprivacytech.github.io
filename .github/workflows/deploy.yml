@@ -22,7 +22,7 @@ jobs:
     - name: List files before checkout
       run: |
         echo "Listing files before checkout:"
-        ls -R
+        ls -R /
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -77,6 +77,8 @@ jobs:
 
     - name: Add custom sitemap
       run: |
+        echo "Listing files in root directory:"
+        ls -R /
         cp custumsitemap.xml _site/sitemap.xml
 
     - name: List files in _site directory after adding custom sitemap
