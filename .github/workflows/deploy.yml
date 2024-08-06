@@ -137,7 +137,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ${{ env.SITE_PATH }}
+        publish_dir: /home/runner/work/CyberPrivacyProtecTech/_site
         keep_files: true
 
     - name: Verify sitemap on server
