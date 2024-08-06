@@ -2,7 +2,6 @@
 Gemfile.local
 Gemfile.local.lock
 _config.local.yml
-sitemap.xml
 
 # Ignore bundler config
 /.bundle
