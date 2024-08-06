@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
     - name: Checkout gh-pages branch
       uses: actions/checkout@v2
@@ -26,3 +27,4 @@ jobs:
         git status
         git commit -m "Deploy from gh-pages" || echo "No changes to commit"
         git push origin gh-pages
+
