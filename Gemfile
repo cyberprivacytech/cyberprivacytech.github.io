@@ -25,3 +25,5 @@ ruby '2.7.4'
 # Debugging Tools
 gem "jekyll-debug", group: :jekyll_plugins
 
+sitemap:
+  exclude: true

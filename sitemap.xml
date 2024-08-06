@@ -9,8 +9,7 @@ sitemap:
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xmlns:custom="https://alexeinazarov.github.io/schemas/custom_schema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>{{ site.url }}{{ site.baseurl }}/</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>

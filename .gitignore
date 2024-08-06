@@ -1,5 +1,6 @@
 # Ignore local development configuration files
 Gemfile.local
+Gemfile.local.lock
 _config.local.yml
 
 # Ignore bundler config
@@ -16,5 +17,6 @@ _site/
 .DS_Store
 node_modules/
 vendor/bundle/
+
 
 
