@@ -91,22 +91,21 @@ jobs:
         echo "Verifying contents of _site directory before deployment:"
         find _site
 
-    - name: Ensure gh-pages branch exists
+    - name: Ensure gh-pages branch exists and is up to date
       run: |
         git fetch origin
-        if ! git show-ref --verify --quiet refs/heads/gh-pages; then
+        if git show-ref --verify --quiet refs/heads/gh-pages; then
+          echo "gh-pages branch exists"
+          git checkout gh-pages
+          git pull origin gh-pages
+        else
           echo "gh-pages branch does not exist, creating it..."
           git checkout --orphan gh-pages
           git reset --hard
           git commit --allow-empty -m "Initial gh-pages commit"
           git push origin gh-pages
-          git checkout main
-        else
-          echo "gh-pages branch exists"
-          git checkout gh-pages
-          git pull origin gh-pages
-          git checkout main
         fi
+        git checkout main
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
