@@ -19,6 +19,11 @@ jobs:
       with:
         fetch-depth: 0  # Ensure full repository is checked out
 
+    - name: List files before checkout
+      run: |
+        echo "Listing files before checkout:"
+        ls -R
+
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -53,8 +58,18 @@ jobs:
       run: |
         echo "Gemfile.lock" >> .gitignore
 
+    - name: List files after checkout
+      run: |
+        echo "Listing files after checkout:"
+        ls -R
+
     - name: Build site
       run: bundle exec jekyll build --verbose --trace
+
+    - name: List files in _site directory
+      run: |
+        echo "Listing files in _site directory:"
+        ls -R _site
 
     - name: Remove generated sitemap
       run: |
@@ -63,6 +78,11 @@ jobs:
     - name: Add custom sitemap
       run: |
         cp custumsitemap.xml _site/sitemap.xml
+
+    - name: List files in _site directory after adding custom sitemap
+      run: |
+        echo "Listing files in _site directory after adding custom sitemap:"
+        ls -R _site
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
