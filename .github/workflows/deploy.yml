@@ -44,7 +44,7 @@ jobs:
         git add .
         if [ -n "$(git status --porcelain)" ]; then
           git commit -m "Regenerate Gemfile.lock and update .gitignore"
-          git push
+          git push origin main
         else
           echo "No changes to commit"
         fi
@@ -103,6 +103,9 @@ jobs:
           git checkout main
         else
           echo "gh-pages branch exists"
+          git checkout gh-pages
+          git pull origin gh-pages
+          git checkout main
         fi
 
     - name: Deploy to GitHub Pages
