@@ -93,23 +93,26 @@ jobs:
 
     - name: Create or update gh-pages branch
       run: |
+        set -e
+        echo "Fetching origin..."
         git fetch origin
         if ! git show-ref --verify --quiet refs/heads/gh-pages; then
           echo "gh-pages branch does not exist, creating it..."
           git checkout --orphan gh-pages
           git reset --hard
           git commit --allow-empty -m "Initial gh-pages commit"
-          git push origin gh-pages
+          git push origin gh-pages || (echo "Push failed, retrying with --force" && git push --force origin gh-pages)
           git checkout main
         else
           echo "gh-pages branch exists"
           git checkout gh-pages
-          git pull origin gh-pages || git reset --hard origin/gh-pages
+          git pull origin gh-pages || (echo "Pull failed, resetting to origin/gh-pages" && git reset --hard origin/gh-pages)
           git checkout main
         fi
 
     - name: Commit and push changes to gh-pages branch
       run: |
+        set -e
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git checkout gh-pages
@@ -117,7 +120,7 @@ jobs:
         git add -f _site/sitemap.xml
         if [ -n "$(git status --porcelain)" ]; then
           git commit -m "Deploy updated sitemap"
-          git push origin gh-pages --force
+          git push origin gh-pages --force || (echo "Push failed, retrying with --force" && git push --force origin gh-pages)
         else
           echo "No changes to commit"
         fi
