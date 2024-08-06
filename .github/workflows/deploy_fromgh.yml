@@ -101,7 +101,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
-        publish_dir: /home/runner/work/CyberPrivacyProtecTech/_site
+        publish_dir: /home/runner/work/CyberPrivacyProtecTech/CyberPrivacyProtecTech/_site
         keep_files: true
 
     - name: Verify sitemap on server
