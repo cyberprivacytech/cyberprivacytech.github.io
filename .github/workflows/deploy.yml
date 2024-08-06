@@ -91,6 +91,10 @@ jobs:
         echo "Verifying contents of _site directory before deployment:"
         find _site
 
+    - name: Get absolute path of _site directory
+      id: site-path
+      run: echo "::set-output name=path::$(realpath _site)"
+
     - name: Create or update gh-pages branch
       run: |
         set -e
@@ -129,7 +133,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: _site
+        publish_dir: ${{ steps.site-path.outputs.path }}
         keep_files: true
 
     - name: Verify sitemap on server
