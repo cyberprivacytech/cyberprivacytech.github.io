@@ -91,14 +91,6 @@ jobs:
         echo "Verifying contents of _site directory before deployment:"
         find _site
 
-    - name: Get absolute path of _site directory
-      run: |
-        echo "SITE_PATH=$(realpath _site)" >> $GITHUB_ENV
-
-    - name: Display SITE_PATH
-      run: |
-        echo "SITE_PATH: $SITE_PATH"
-
     - name: Create or update gh-pages branch
       run: |
         set -e
@@ -134,10 +126,10 @@ jobs:
         fi
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: /home/runner/work/CyberPrivacyProtecTech/_site
+        publish_dir: _site
         keep_files: true
 
     - name: Verify sitemap on server
