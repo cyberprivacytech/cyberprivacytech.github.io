@@ -1,0 +1,31 @@
+name: Force Redeploy from gh-pages
+
+on:
+  push:
+    branches:
+      - gh-pages
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout gh-pages branch
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+
+    - name: Force Touch All Files
+      run: |
+        find . -type f -exec touch {} +
+
+    - name: Commit and Push Changes
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add -A
+        git commit -m "Force redeploy from gh-pages" || echo "No changes to commit"
+        git push origin gh-pages
