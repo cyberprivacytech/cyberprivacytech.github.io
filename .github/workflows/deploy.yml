@@ -54,6 +54,10 @@ jobs:
     - name: Build site
       run: bundle exec jekyll build --verbose --trace
 
+    - name: Replace sitemap with custom sitemap
+      run: |
+        mv _site/custumsitemap.xml _site/sitemap.xml
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
