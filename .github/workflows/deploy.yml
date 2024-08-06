@@ -16,6 +16,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -54,9 +56,21 @@ jobs:
     - name: Build site
       run: bundle exec jekyll build --verbose --trace
 
+    - name: Remove generated sitemap
+      run: |
+        rm -f _site/sitemap.xml
+
+    - name: Add custom sitemap
+      run: |
+        cp custumsitemap.xml _site/sitemap.xml
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
+
+    - name: Clear GitHub Pages cache
+      run: |
+        curl -X PURGE https://alexeinazarov.github.io/CyberPrivacyProtecTech/sitemap.xml
 
