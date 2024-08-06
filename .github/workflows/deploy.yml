@@ -104,7 +104,7 @@ jobs:
         else
           echo "gh-pages branch exists"
           git checkout gh-pages
-          git pull origin gh-pages
+          git pull origin gh-pages || git reset --hard origin/gh-pages
           git checkout main
         fi
 
@@ -113,11 +113,11 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git checkout gh-pages
-        git pull origin gh-pages
+        git pull origin gh-pages || git reset --hard origin/gh-pages
         git add -f _site/sitemap.xml
         if [ -n "$(git status --porcelain)" ]; then
           git commit -m "Deploy updated sitemap"
-          git push origin gh-pages
+          git push origin gh-pages --force
         else
           echo "No changes to commit"
         fi
