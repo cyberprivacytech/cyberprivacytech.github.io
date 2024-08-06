@@ -91,7 +91,7 @@ jobs:
         echo "Verifying contents of _site directory before deployment:"
         find _site
 
-    - name: Create gh-pages branch if it doesn't exist
+    - name: Ensure gh-pages branch exists
       run: |
         git fetch origin
         if ! git show-ref --verify --quiet refs/heads/gh-pages; then
