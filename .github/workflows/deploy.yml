@@ -98,7 +98,7 @@ jobs:
         git add -f _site/sitemap.xml
         if [ -n "$(git status --porcelain)" ]; then
           git commit -m "Deploy updated sitemap"
-          git push origin gh-pages
+          git push origin gh-pages || git push --set-upstream origin gh-pages
         else
           echo "No changes to commit"
         fi
