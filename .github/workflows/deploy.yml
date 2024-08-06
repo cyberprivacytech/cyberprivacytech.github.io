@@ -90,11 +90,17 @@ jobs:
         echo "Listing files in _site directory after adding custom sitemap:"
         ls -R _site
 
+    - name: Verify _site directory contents before deployment
+      run: |
+        echo "Verifying contents of _site directory before deployment:"
+        find _site
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
+        keep_files: true
 
     - name: Clear GitHub Pages cache
       run: |
