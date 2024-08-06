@@ -11,12 +11,9 @@ _config.local.yml
 /tmp/*
 /vendor/bundle
 .DS_Store
-_site/
 .jekyll-cache/
 *.gem
 .DS_Store
 node_modules/
 vendor/bundle/
-
-
 
