@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - gh-pages
-  workflow_dispatch:name: Deploy from gh-pages
-
-on:
-  push:
-    branches:
-      - gh-pages
   workflow_dispatch:
 
 jobs:
@@ -28,31 +22,8 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        echo "Deployment triggered at $(date)" >> deployment-log.txt # Add a timestamp to force a change
+        echo "Deployment triggered at $(date)" >> deployment-log.txt
         git add -A
-        git status # Check what changes are detected
-        git commit -m "Deploy from gh-pages" || echo "No changes to commit"
-        git push origin gh-pages
-
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
-    steps:
-    - name: Checkout gh-pages branch
-      uses: actions/checkout@v2
-      with:
-        ref: gh-pages
-
-    - name: Force Add and Commit Changes
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        echo "Deployment triggered at $(date)" >> deployment-log.txt # Add a timestamp to force a change
-        git add -A
-        git status # Check what changes are detected
+        git status
         git commit -m "Deploy from gh-pages" || echo "No changes to commit"
         git push origin gh-pages
