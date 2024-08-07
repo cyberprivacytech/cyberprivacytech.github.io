@@ -8,7 +8,7 @@ permalink: /logo/
 ---
 
 <div class="logo-page">
-  <img src="{{ '/assets/images/logo-579.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo" width="579" height="579">
+  <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Cyber Privacy Protection Tech Logo" width="579" height="579">
 
 <p>The <span style="color: blue;">CyberPrivacy</span><span style="color: green;">ProtecTech</span> logo is a sophisticated emblem that epitomizes our unwavering commitment to empowering you with control over your digital security. At the heart of the logo is a central shield, symbolizing robust protection and the core of our mission. This shield is a guardian of your data, signifying the fortitude and resilience of our cybersecurity measures. The lock within the shield embodies the secure and confidential data handling that we guarantee, ensuring that your privacy is protected by proven mathematical principles rather than the interests of third parties.</p>
 <p>Encircling the central shield are various elements that collectively represent the comprehensive scope of our expertise:</p>
