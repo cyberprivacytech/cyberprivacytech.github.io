@@ -11,7 +11,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
   - jekyll-last-modified-at
-  - jekyll-sitemap
+  - jekyll-sitemap #comment out for custom sitemap
 
 github_username: alexeinazarov
 google_analytics: G-91WCLQETXM
