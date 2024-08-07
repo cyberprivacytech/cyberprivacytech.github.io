@@ -19,7 +19,7 @@ Meet [Alexey Nazarov](https://www.linkedin.com/in/alexeinazarov), the founder of
 
 1. **Smartphone Privacy Consulting**: Personalized strategies to protect your personal and professional information on your smartphone from unwanted attention (i.e., from data harvesters, advertisers, etc).
    <details>
-   <summary><span style="color: orange;">Click for detailed information</span></summary>
+   <summary><span style="color: blue;">Click for detailed information</span></summary>
      <span style="color: blue;">Tailored strategies to safeguard your personal and professional information on your smartphone, ensuring the lowest probability of access by third-party agents in any ways and situations possible. Our solutions are validated using AI and ML to identify and mitigate potential threats proactively.</span>
    </details>
 
