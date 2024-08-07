@@ -12,7 +12,7 @@ sitemap:
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
                             http://www.google.com/schemas/sitemap-image/1.1 https://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd
                             http://www.google.com/schemas/sitemap-news/0.9 https://www.google.com/schemas/sitemap-news/0.9/sitemap-news.xsd
-                            https://alexeinazarov.github.io/schemas/custom_schema /tmp/custom_schema.xsd">
+                            https://alexeinazarov.github.io/schemas/custom_schema/custom_schema.xsd">
     <url>
         <loc>{{ site.url }}{{ site.baseurl }}/</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
