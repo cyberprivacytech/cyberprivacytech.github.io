@@ -23,11 +23,9 @@ sitemap:
             <image:title>Cyber Privacy Protection Tech Logo</image:title>
             <image:caption>Logo of Cyber Privacy Protection Tech, conseil en cybersécurité personalisé à Paris.</image:caption>
         </image:image>
-        {% if page.keywords %}
         <custom:keywords>
-            {{ page.keywords }}
+            cybersecurity, privacy, data protection, consulting, Paris, Alexey Nazarov, CyberPrivacyProtecTech
         </custom:keywords>
-        {% endif %}
     </url>
 
     {% for post in site.posts %}
