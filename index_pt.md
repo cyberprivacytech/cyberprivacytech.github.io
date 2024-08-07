@@ -1,7 +1,7 @@
 ---
 layout: home
 lang: pt
-title: ""
+title: "PT"
 permalink: /index_pt/
 last_modified_at: 2024-08-04T00:00:00+00:00
 keywords: "cibersegurança, privacidade, proteção de dados, consultoria, Paris, Alexey Nazarov, CyberPrivacyProtecTech, segurança digital, criptografia, inteligência artificial, machine learning, proteção de dados, auditoria de segurança, teste de penetração, rotação de endereços MAC e IP, conteinerização, virtualização, sandboxing, serviços de criptografia, análise de vulnerabilidades, privacidade de smartphones, consultoria em cibersegurança, cibersegurança em Paris, segurança de dispositivos móveis, segurança Android, teste de penetração Android, segurança iOS, segurança de aplicativos móveis"

@@ -1,6 +1,6 @@
 ---
 layout: home
-title: ""
+title: "FR"
 lang: fr
 permalink: /
 last_modified_at: 2024-08-05T00:00:00+00:00
