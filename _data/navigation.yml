@@ -1,12 +1,12 @@
 main:
   - title: "Français"
-    url: "/CyberPrivacyProtecTech/"
+    url: ""
     color: "#00ff00"  # Green
   - title: "English"
-    url: "/CyberPrivacyProtecTech/index_en/"
+    url: "index_en/"
     color: "#00ff00"  # Green
   - title: "Português"
-    url: "/CyberPrivacyProtecTech/index_pt/"
+    url: "index_pt/"
     color: "#00ff00"  # Green
   - title: "CONTACT"
     url: "https://www.linkedin.com/in/alexeinazarov"
