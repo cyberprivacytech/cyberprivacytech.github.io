@@ -10,7 +10,7 @@ keywords: "Swole Doge vs Cheems, Cyber Privacy, Digital Privacy 2024, Zero Trust
     <img src="{{ '/assets/images/Swole_Doge_vs_Cheems_Cyber_Privacy_2024.png' | relative_url }}" alt="Swole Doge vs Cheems Cyber Privacy 2024" width="450" height="450">
   </div>
   <div class="text-container">
-    <p>"Is digital privacy evolving? Just ask Swole Doge and Cheems—two meme icons who hilariously capture the shift from passive data protection to taking the reins in the digital world."</p>
+    <p>Is digital privacy evolving? Just ask Swole Doge and Cheems—two meme icons who hilariously capture the shift from passive data protection to taking the reins in the digital world.</p>
         
   [← Back to Main Page](https://cyberprivacy.tech)
 
