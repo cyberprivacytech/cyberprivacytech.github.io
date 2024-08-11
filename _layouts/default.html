@@ -159,9 +159,25 @@
   </header>
   <main>
     {{ content }}
+
+    <!-- Recent Posts Section -->
+    <section>
+      <h2>
+        {% if page.lang == "fr" %}
+          Articles Récents
+        {% elsif page.lang == "pt" %}
+          Postagens Recentes
+        {% else %}
+          Recent Posts
+        {% endif %}
+      </h2>
+      <!-- Code to display the recent posts -->
+      {% include recent-posts.html %}
+    </section>
+
   </main>
   <footer>
-    <p>&copy; {{ site.title }}</p>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
 </body>
 </html>
