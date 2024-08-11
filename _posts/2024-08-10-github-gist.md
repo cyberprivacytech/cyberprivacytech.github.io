@@ -22,3 +22,5 @@ The Gist includes:
 - **Advanced Persistent Threats (APTs)**: Sophisticated, targeted cyber attacks on financial institutions.
 
 The Gist is backed by references to standards and guidelines from NIST, OWASP, and ISO/IEC, providing a comprehensive resource for cybersecurity professionals.
+
+[Access the full report here](https://gist.github.com/alexeinazarov/84731ed2f1479dc6e75e002e65030b0d)
