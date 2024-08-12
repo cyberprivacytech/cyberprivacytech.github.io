@@ -17,3 +17,9 @@ _config.local.yml
 node_modules/
 vendor/bundle/
 
+# Ignore dynamically generated metadata and hash files in assets/images/
+assets/images/*_metadata.txt
+assets/images/*_metadata_signed.txt
+assets/images/*_image_hash.txt
+
+
