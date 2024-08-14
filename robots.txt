@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /favicon.ico
-Sitemap: {{ "https://cyberprivacy.tech/sitemap.xml" | absolute_url }}
+Sitemap: https://cyberprivacy.tech/sitemap.xml
 
