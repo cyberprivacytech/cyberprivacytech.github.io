@@ -21,5 +21,6 @@ vendor/bundle/
 assets/images/*_metadata.txt
 assets/images/*_metadata_signed.txt
 assets/images/*_image_hash.txt
+/signature/*
 
 

@@ -32,14 +32,3 @@ This image and its metadata are licensed under the Creative Commons Attribution-
    ```
 
 2. **Verify Integrity**: After running the script, the signed metadata and SHA-256 hash will be generated in the `/assets/images/` directory. Use the hash to verify the integrity of the image.
-
-### Summary of Changes:
-1. **File Names Updated**: The names of the signed metadata and hash files have been updated to match the image file, ensuring clarity.
-2. **Detailed Compliance**: The README now includes a section detailing the cryptographic standards and legal frameworks to which the metadata and signing process comply.
-3. **Usage Instructions**: Clear instructions on how to run the script and verify the integrity of the image are included.
-
-### Next Steps:
-- Place this `README.md` file in the `/signature/` directory on GitHub.
-- Ensure all other relevant files (the script, signed metadata, and hash) are correctly placed in the `/assets/images/` directory and are properly ignored in the `.gitignore` file.
-
-This README will help others understand the purpose of each file, the standards you’re complying with, and how to use the script you’ve created.
