@@ -36,6 +36,7 @@ exclude:
   - .jekyll-cache/
   - _site/
   - feed.xml
+  - "signature"
 
 include:
   - sitemap.xml
