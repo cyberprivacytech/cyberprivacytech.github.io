@@ -37,7 +37,7 @@ exclude:
   - _site/
   - feed.xml
   - "signature"
-  - assets/css/
+  - assets/css/main.scss
 
 include:
   - sitemap.xml
