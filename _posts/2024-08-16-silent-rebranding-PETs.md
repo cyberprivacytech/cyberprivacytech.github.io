@@ -8,7 +8,7 @@ keywords: "Swole Doge vs Cheems, Cyber Privacy, Digital Privacy 2024, Zero Trust
 
 <div class="content-container">
   <div class="image-container">
-    <img src="{{ '/assets/images/Swole_Doge_vs_Cheems_Cyber_PETs_2024.png' | relative_url }}" alt="Swole Doge vs Cheems Cyber Privacy 2024" width="450" height="450">
+    <img src="{{ '/assets/images/Swole_Doge_vs_Cheems_Cyber_PETs_2024.png' | relative_url }}" alt="Swole Doge vs Cheems Cyber PETs Privacy-Enhancing Technologies 2024" width="450" height="450">
   </div>
   <div class="text-container">
     <p>Do the words 'Privacy-Enhancing Technologies (PETs)' mean what you think they do? It’s time to get acquainted with your Cyber Pets!</p>
@@ -42,6 +42,6 @@ keywords: "Swole Doge vs Cheems, Cyber Privacy, Digital Privacy 2024, Zero Trust
 
 <p>As we navigate the future of privacy in the digital age, it is essential to strike a balance between the practicalities of data-driven innovation and the fundamental rights of individuals to control their personal information. Reinvigorating the original vision of PETs as a means to prevent data collection, rather than merely manage it, could be key to achieving this balance.</p>
 
-<p>For further reading and a deep dive into the history and future of privacy-enhancing technologies, explore the works of David Chaum and the impact of the GDPR on global data protection standards <a href=https://digitalprivacyguru.com/articles/the-evolution-of-data-privacy-from-early-days-to-the-digital-age>here</href>and <a href=https://academic.oup.com/book/33735/chapter/288377754>here</href>.</p>
+<p>For further reading and a deep dive into the history and future of privacy-enhancing technologies, explore the works of David Chaum and the impact of the GDPR on global data protection standards <a href="https://digitalprivacyguru.com/articles/the-evolution-of-data-privacy-from-early-days-to-the-digital-age>here</href">and <a href="https://academic.oup.com/book/33735/chapter/288377754>here</href">.</p>
 </div>
 </div>
