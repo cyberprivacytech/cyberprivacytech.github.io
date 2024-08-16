@@ -46,5 +46,8 @@ keywords: "Swole Doge vs Cheems, Cyber Privacy, Digital Privacy 2024, Zero Trust
 
 <p>For further reading and a deep dive into the history and future of privacy-enhancing technologies, explore the works of David Chaum and the impact of the GDPR on global data protection standards <a href="https://safecomputing.umich.edu/protect-privacy/history-of-privacy-timeline">here</a> and <a href="https://academic.oup.com/book/33735/chapter/288377754">here</a>.</p>
 
+
+<p><a href="https://cyberprivacy.tech">← Back to Main Page</a></p>
+
   </div>
 </div>
