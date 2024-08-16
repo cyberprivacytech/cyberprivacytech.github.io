@@ -42,7 +42,7 @@ keywords: "Swole Doge vs Cheems, Cyber Privacy, Digital Privacy 2024, Zero Trust
 
 <p>As we navigate the future of privacy in the digital age, it is essential to strike a balance between the practicalities of data-driven innovation and the fundamental rights of individuals to control their personal information. Reinvigorating the original vision of PETs as a means to prevent data collection, rather than merely manage it, could be key to achieving this balance.</p>
 
-<p>For further reading and a deep dive into the history and future of privacy-enhancing technologies, explore the works of David Chaum and the impact of the GDPR on global data protection standards <a href="https://safecomputing.umich.edu/protect-privacy/history-of-privacy-timeline>here</href">here</a> and <a href="https://academic.oup.com/book/33735/chapter/288377754>here</href">here</a>.</p>
+<p>For further reading and a deep dive into the history and future of privacy-enhancing technologies, explore the works of David Chaum and the impact of the GDPR on global data protection standards <a href="https://safecomputing.umich.edu/protect-privacy/history-of-privacy-timeline">here</a> and <a href="https://academic.oup.com/book/33735/chapter/288377754">here</a>.</p>
 
   </div>
 </div>
