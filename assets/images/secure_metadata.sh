@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# Ensure script is run from the correct directory (catalog/signature/)
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Variables
 IMAGE="$1"
 IMAGE_NAME=$(basename "$IMAGE" .png)
-IMAGE_DIR="$SCRIPT_DIR/../assets/images"
+IMAGE_DIR="../assets/images"
 METADATA_FILE="${IMAGE_DIR}/${IMAGE_NAME}_metadata.txt"
 OUTPUT_SIGNED_METADATA="${IMAGE_DIR}/${IMAGE_NAME}_metadata_signed.txt"
 OUTPUT_HASH="${IMAGE_DIR}/${IMAGE_NAME}_image_hash.txt"
@@ -14,7 +13,6 @@ METADATA="Template used: https://knowyourmeme.com/photos/1856499-swole-doge-vs-c
 Author: Alexey Nazarov (linkedin.com/in/alexeinazarov)\n
 Author's GitHub: github.com/alexeinazarov\n
 Intended use: For a research analytical piece at cyberprivacy.tech, currently hosted at github.com/cyberprivacytech/cyberprivacytech.github.io, also owned by the author.\n
-Text: Swole Doge - PETs 1980: 'Here are all the protocols and source codes that guarantee USER data is private and USER communication is untraceable.' Cheems - PETs 2024: 'Everything in cyberspace can be collected, traced, and hacked. The COLLECTOR is guaranteed protection—as long as they’ve polished the protocols.'\n
 License: Creative Commons Attribution-ShareAlike (CC BY-SA)\n
 Original Creation Date: 11 August 2024 15:12:00\n
 Date Last Modified: 11 August 2024 16:42:00\n
@@ -43,9 +41,6 @@ exiftool -Comment="$SIGNED_CONTENT" "${IMAGE_DIR}/${IMAGE_NAME}.png"
 sha256sum "${IMAGE_DIR}/${IMAGE_NAME}.png" > "$OUTPUT_HASH"
 
 # Clean up original metadata file (optional)
-if [ -f "$METADATA_FILE" ]; then
-    rm "$METADATA_FILE"
-fi
-
+rm "$METADATA_FILE"
 echo "Metadata signed, attached to ${IMAGE_DIR}/${IMAGE_NAME}.png, and SHA-256 hash generated."
 
