@@ -13,6 +13,9 @@ keywords: "Swole Doge vs Cheems, Cyber Privacy, Digital Privacy 2024, Zero Trust
   <div class="text-container">
     <p>Do the words 'Privacy-Enhancing Technologies (PETs)' mean what you think they do? It’s time to get acquainted with your Cyber Pets!</p>
 
+
+
+
 <p><a href="https://cyberprivacy.tech">← Back to Main Page</a></p>
 
 <p>In the early days of the digital revolution, privacy-enhancing technologies (PETs) emerged as a beacon of hope for those seeking to protect their personal information from the ever-encroaching eyes of surveillance. Spearheaded by pioneers like <a href="https://dblp.org/pid/c/DavidChaum.html">David Chaum</a> from University California Berkeley (where we ourselves received one of our first experiences in advanced algebra), these technologies were designed with a singular purpose: to prevent the collection of data that could be used to track, profile, and ultimately control individuals. Chaum’s work, particularly his <a href="https://dl.acm.org/doi/pdf/10.1145/358549.358563">1981 paper on untraceable electronic mail</a>, laid the foundation for a new era where individuals could communicate and interact in digital spaces without leaving a traceable footprint.</p>
@@ -42,6 +45,6 @@ keywords: "Swole Doge vs Cheems, Cyber Privacy, Digital Privacy 2024, Zero Trust
 
 <p>As we navigate the future of privacy in the digital age, it is essential to strike a balance between the practicalities of data-driven innovation and the fundamental rights of individuals to control their personal information. Reinvigorating the original vision of PETs as a means to prevent data collection, rather than merely manage it, could be key to achieving this balance.</p>
 
-<p>For further reading and a deep dive into the history and future of privacy-enhancing technologies, explore the works of David Chaum and the impact of the GDPR on global data protection standards <a href="https://digitalprivacyguru.com/articles/the-evolution-of-data-privacy-from-early-days-to-the-digital-age>here</href">and <a href="https://academic.oup.com/book/33735/chapter/288377754>here</href">.</p>
+<p>For further reading and a deep dive into the history and future of privacy-enhancing technologies, explore the works of David Chaum and the impact of the GDPR on global data protection standards <a href="https://digitalprivacyguru.com/articles/the-evolution-of-data-privacy-from-early-days-to-the-digital-age>here</href">here</a> and <a href="https://academic.oup.com/book/33735/chapter/288377754>here</href">here</a>
 </div>
 </div>
