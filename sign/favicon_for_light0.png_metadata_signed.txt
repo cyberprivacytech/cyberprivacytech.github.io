@@ -1,0 +1,44 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Author: Alexey Nazarov (linkedin.com/in/alexeinazarov)
+
+Author's GitHub: github.com/alexeinazarov
+
+Intended use: For a research analytical piece at cyberprivacy.tech, currently hosted at github.com/cyberprivacytech/cyberprivacytech.github.io, also owned by the author.
+
+License: Creative Commons Attribution-ShareAlike (CC BY-SA)
+
+Original Creation Date: August 2024
+
+Date Last Modified: 17 August 2024 16:42:00
+
+Cryptographic Standards: Metadata signed with GPG (RSA-3072) and SHA-256, compliant with NIST SP 800-131A Rev. 2 and ISO/IEC 9796-2:2022 standards.
+
+Legal Framework: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license. By using or distributing this image, you agree to the terms of this license and acknowledge that any modifications must also be shared under the same license.
+
+Applicable Standards and Legal Notices:
+
+- - NIST SP 800-131A Rev. 2: Transitioning the Use of Cryptographic Algorithms and Key Lengths (March 2019)
+
+- - NIST FIPS 186-4: Digital Signature Standard (DSS) (July 2013)
+
+- - ISO/IEC 9796-2:2022: Information security — Digital signature schemes giving message recovery — Part 2: Integer factorization-based mechanisms.
+
+- - Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license.
+
+- - This image's metadata is protected under these standards, ensuring compliance with international legal and cryptographic frameworks.
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCgAdFiEEuwbaUTnlR8fbvHCc6cgkY5jpuskFAmbBMWwACgkQ6cgkY5jp
+usl3OAwAibVcUG22tVch/OD3Kspqp0rUDOrHEKl7zsexG5PbZMLu6Tf7cKEr6HhA
+ZG1V7SkjwRvYG+O/a5RjnMOaY8Z4TN2H7JCJoEmB9e2tqq78amqiSapLnmJgHLwQ
+Mac9U7jpZSmv5Fkal1m7MoOfEDIzM+4oPRM0rHtpZYwCXTA+ugRnleHJL0/fB1Br
+08hYsLdSS+/1gPv4Txqy5h3MO36PK19oRn3gJOH2VBToMyJRF3h1Lp4gVPlZCV8W
+KoojP6I1RJda52A1JA4L99qjOC92gYO8P0rcJgdndVe+aDlBFwbkquCcH7EPSfUT
+uizAzfT2N5D9hfm8Qf6B5dCXqzDr1RaHJfmZt1ARYYSb6Zi82ij7Bdondl/MkyGc
+cjAxLorAv28nEOmWi45SvClpS44WK3tL4XDSmZf4BoI4LkyDzkKUKPjM9UwfTC+e
+hirZOh3MR9p52DXuWOwGDhMbVQWdrCQcZj9IiPTxTA/RE1dNNKZMJYaJ2TTX/cjR
+4ROjfqZl
+=2trC
+-----END PGP SIGNATURE-----
