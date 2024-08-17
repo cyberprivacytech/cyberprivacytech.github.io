@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /favicon.ico
+Allow: /favicon.svg
 Sitemap: https://cyberprivacy.tech/sitemap.xml
 
