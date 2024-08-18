@@ -7,7 +7,7 @@ keywords: "Swole Doge vs Cheems 2024, Cyber Privacy 2024, Digital Privacy 2024, 
 ---
 <div class="content-container">
   <div class="image-container">
-    <img src="{{ '/assets/images/Swole_Doge_vs_Cheems_Cyber_Privacy_2024.png' | relative_url }}" alt="Swole Doge vs Cheems Cyber Privacy 2024" width="450" height="450">
+    <img src="{{ '/assets/images/Swole_Doge_vs_Cheems_Cyber_PETs_2024.png' | relative_url }}" alt="Swole Doge vs Cheems Cyber Privacy 2024" width="450" height="450">
   </div>
   <div class="text-container">
     <p>Ever wondered what happened to the bold privacy ideals of yesteryears? Just ask Swole Doge and Cheems, the meme legends who hilariously illustrate the fall from grace of Privacy Enhancing Technologies (PETs) over the decades. Spoiler alert: it's a bit like watching your favorite superhero turn into a couch potato.</p>
