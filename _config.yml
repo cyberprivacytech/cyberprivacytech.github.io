@@ -13,7 +13,7 @@ plugins:
   - jekyll-sitemap #comment out for custom sitemap
 
 github_username: cyberprivacytech
-google_analytics: G-91WCLQETXM
+google_analytics: G-6P8CNFK2DC
 
 defaults:
   - scope:

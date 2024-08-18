@@ -13,7 +13,6 @@ keywords: "Swole Doge vs Cheems 2024, Cyber Privacy 2024, Digital Privacy 2024, 
     <p>Curious about what happened to the bold privacy ideals of yesteryears? Just ask Swole Doge and Cheems, the meme legends who hilariously illustrate the fall from grace of Privacy Enhancing Technologies (PETs) over the decades. Spoiler alert: it's a bit like watching your favorite superhero turn into a couch potato.</p>
 
 <p><a href="https://cyberprivacy.tech">← Back to Main Page</a></p>
-****
 
 <p>At <span style="color: blue;">CyberPrivacy</span><span style="color: green;">ProtecTech</span>, we’ve taken it upon ourselves to revisit the golden age of PETs—back when they were the Arnold Schwarzeneggers of the digital world. Fast forward to 2024, and what do we see? PETs looking more like your out-of-shape uncle who still talks about “the good ol’ days” while indulging in another round of complacency.</p>
 
