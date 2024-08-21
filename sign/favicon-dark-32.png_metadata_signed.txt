@@ -1,0 +1,44 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Author: Alexey Nazarov (linkedin.com/in/alexeinazarov)
+
+Author's GitHub: github.com/alexeinazarov
+
+Intended use: For a research analytical piece at cyberprivacy.tech, currently hosted at github.com/cyberprivacytech/cyberprivacytech.github.io, also owned by the author.
+
+License: Creative Commons Attribution-ShareAlike (CC BY-SA)
+
+Original Creation Date: August 2024
+
+Date Last Modified: 17 August 2024 16:42:00
+
+Cryptographic Standards: Metadata signed with GPG (RSA-3072) and SHA-256, compliant with NIST SP 800-131A Rev. 2 and ISO/IEC 9796-2:2022 standards.
+
+Legal Framework: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license. By using or distributing this image, you agree to the terms of this license and acknowledge that any modifications must also be shared under the same license.
+
+Applicable Standards and Legal Notices:
+
+- - NIST SP 800-131A Rev. 2: Transitioning the Use of Cryptographic Algorithms and Key Lengths (March 2019)
+
+- - NIST FIPS 186-4: Digital Signature Standard (DSS) (July 2013)
+
+- - ISO/IEC 9796-2:2022: Information security — Digital signature schemes giving message recovery — Part 2: Integer factorization-based mechanisms.
+
+- - Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license.
+
+- - This image's metadata is protected under these standards, ensuring compliance with international legal and cryptographic frameworks.
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCgAdFiEEuwbaUTnlR8fbvHCc6cgkY5jpuskFAmbGE6IACgkQ6cgkY5jp
+uskqmAwAhtnafZFbWMnexQOODRZ0zWKP+iQnJnVfyjr/xUtCj4ahAbLRJPGKYw0v
+nCMhnbdKeKkqnhx3PYp0higTGlcZVyTRDmQ9/gSZ8En/Z/bTG2PewVStL4EIK4a0
+AqYYTX9hjRp1LYply8/Ze8V/bUEF76THjXmouutqsMKqN45yxJ5EjGHfIuvupdJz
+wHQL9u7JDM+NqGW5hU4TAupnVf3aXpoMAq19y6uzVMrzCiyK3f9KULzibuxoi/xN
+iUUkmrDN+X8LWpl3bOoahneIEpCGQvrMt3Sus71UqTPf2CW3XGvra5R6iISYS7G8
+FJhd8nPqcr1Rg69a4T1CTGYFI8cNZwCjxxsqFnrkJPm1piQkUYGK6qZ+g9eR+/xA
+S9nyDJJJMIEMX03qNsDgc1uYIMYC1ysCef7IoTz79/VlLOEyEL5nNSmp2Ow0r3B7
+u1Xaiyf1JKlXSNBg4gwQL6gLKWJ11pTlmr5XKwRNTQgP3WGd/5QLCIJ1QVItqgWL
+rY8wTDI/
+=ZxLA
+-----END PGP SIGNATURE-----
