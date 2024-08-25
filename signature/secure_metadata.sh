@@ -14,7 +14,8 @@ METADATA="Template used: https://knowyourmeme.com/photos/1856499-swole-doge-vs-c
 Author: Alexey Nazarov (linkedin.com/in/alexeinazarov)\n
 Author's GitHub: github.com/alexeinazarov\n
 Intended use: For a research analytical piece at cyberprivacy.tech, currently hosted at github.com/cyberprivacytech/cyberprivacytech.github.io, also owned by the author.\n
-Text: Swole Doge - PETs 1980: 'Here are all the protocols and source codes that guarantee USER data is private and USER communication is untraceable.' Cheems - PETs 2024: 'Everything in cyberspace can be collected, traced, and hacked. The COLLECTOR is guaranteed protection—as long as they’ve polished the protocols.'\n
+Meme: 'Swole Dog and Cheems : The Startup Cybersecurity Attackers.'\n
+Text: Swole Doge - The Confident Attacker: 'No startup has the resources to protect their tech developments. Easy prey.' Cheems - The Reality Check: 'These DEFCON-1 cyber defenses, built even with open-source tools, leave no gap for my piracy or hacking schemes.'\n
 License: Creative Commons Attribution-ShareAlike (CC BY-SA)\n
 Original Creation Date: 11 August 2024 15:12:00\n
 Date Last Modified: 11 August 2024 16:42:00\n
